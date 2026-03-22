@@ -1,4 +1,5 @@
 ---
+import { base } from '../utils/base';
 const currentYear = new Date().getFullYear();
 ---
 
@@ -63,7 +64,7 @@ const currentYear = new Date().getFullYear();
           </div>
         </div>
         <a
-          href="/contact"
+          href={base("contact")}
           class="inline-flex items-center gap-2 mt-5 px-5 py-2 text-[13px] font-semibold uppercase tracking-wider bg-brand-copper text-white rounded-lg hover:bg-brand-copper/90 transition-colors"
         >
           Get in Touch

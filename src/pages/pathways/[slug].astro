@@ -1,4 +1,5 @@
 ---
+import { base } from '../../utils/base';
 import Base from '../../layouts/Base.astro';
 import { pathways } from '../../content/pathways';
 import type { Pathway } from '../../content/pathways';
@@ -21,11 +22,11 @@ const { pathway } = Astro.props;
   <!-- Hero -->
   <section class="relative bg-brand-navy text-white">
     <div class="absolute inset-0">
-      <img src={pathway.photo} alt={pathway.name} class="w-full h-full object-cover opacity-20" />
+      <img src={base(pathway.photo)} alt={pathway.name} class="w-full h-full object-cover opacity-20" />
       <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-brand-navy/70"></div>
     </div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-      <a href="/pathways" class="inline-flex items-center gap-1 text-sm text-white/60 hover:text-white mb-4 transition-colors">
+      <a href={base("pathways")} class="inline-flex items-center gap-1 text-sm text-white/60 hover:text-white mb-4 transition-colors">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
         </svg>
@@ -78,7 +79,7 @@ const { pathway } = Astro.props;
         <!-- Photo -->
         <div>
           <img
-            src={pathway.photo}
+            src={base(pathway.photo)}
             alt={`${pathway.name} students in action`}
             class="rounded-xl w-full shadow-lg"
           />
@@ -93,7 +94,7 @@ const { pathway } = Astro.props;
             <h3 class="text-sm font-semibold text-brand-blue uppercase tracking-wide mb-4">Your Instructor</h3>
             {pathway.instructor.headshot && (
               <img
-                src={pathway.instructor.headshot}
+                src={base(pathway.instructor.headshot)}
                 alt={pathway.instructor.name}
                 class="w-24 h-24 rounded-xl object-cover mb-4"
               />
@@ -156,7 +157,7 @@ const { pathway } = Astro.props;
           <h3 class="font-bold text-brand-navy">Interested?</h3>
           <p class="text-sm text-brand-slate/70 mt-2">Talk to your school counselor about enrolling in this pathway, or contact us for more information.</p>
           <a
-            href="/contact"
+            href={base("contact")}
             class="mt-4 inline-flex items-center justify-center w-full px-4 py-2.5 text-sm font-bold bg-brand-gold text-brand-navy rounded-lg hover:bg-amber-400 transition-colors"
           >
             Get in Touch

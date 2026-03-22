@@ -1,4 +1,5 @@
 ---
+import { base } from '../utils/base';
 import Base from '../layouts/Base.astro';
 import StatBar from '../components/StatBar.astro';
 ---
@@ -113,8 +114,8 @@ import StatBar from '../components/StatBar.astro';
         <h3 class="text-xl font-bold text-brand-navy">Want to Learn More?</h3>
         <p class="text-sm text-brand-slate/70 mt-2">Contact us to discuss how CTE can be part of your student's plan.</p>
         <div class="mt-4 flex flex-col sm:flex-row gap-3 justify-center">
-          <a href="/pathways" class="px-5 py-2.5 text-sm font-bold bg-brand-navy text-white rounded-lg hover:bg-brand-slate transition-colors">Explore Pathways</a>
-          <a href="/contact" class="px-5 py-2.5 text-sm font-bold bg-brand-gold text-brand-navy rounded-lg hover:bg-amber-400 transition-colors">Contact Us</a>
+          <a href={base("pathways")} class="px-5 py-2.5 text-sm font-bold bg-brand-navy text-white rounded-lg hover:bg-brand-slate transition-colors">Explore Pathways</a>
+          <a href={base("contact")} class="px-5 py-2.5 text-sm font-bold bg-brand-gold text-brand-navy rounded-lg hover:bg-amber-400 transition-colors">Contact Us</a>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 ---
+import { base } from '../utils/base';
 import Base from '../layouts/Base.astro';
 import { pathways } from '../content/pathways';
 ---
@@ -103,10 +104,10 @@ import { pathways } from '../content/pathways';
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {pathways.map((p) => (
           <a
-            href={`/pathways/${p.slug}`}
+            href={base(`pathways/${p.slug}`)}
             class="flex items-center gap-3 bg-white rounded-lg p-4 shadow-sm border border-gray-100 hover:shadow-md hover:border-brand-blue/20 transition-all group"
           >
-            <img src={p.photo} alt={p.name} class="w-14 h-14 rounded-lg object-cover shrink-0" loading="lazy" />
+            <img src={base(p.photo)} alt={p.name} class="w-14 h-14 rounded-lg object-cover shrink-0" loading="lazy" />
             <div>
               <p class="font-bold text-brand-navy text-sm group-hover:text-brand-blue transition-colors">{p.name}</p>
               <p class="text-xs text-brand-slate/50">{p.school}</p>
