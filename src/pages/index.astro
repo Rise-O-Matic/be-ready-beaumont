@@ -1,5 +1,4 @@
 ---
-import { base } from '../utils/base';
 import Base from '../layouts/Base.astro';
 import StatBar from '../components/StatBar.astro';
 import PathwayCard from '../components/PathwayCard.astro';
@@ -14,7 +13,7 @@ const featuredPathways = pathways.filter(p => p.slug !== 'health-care-admin').sl
     <!-- Background image -->
     <div class="absolute inset-0">
       <img
-        src={`${import.meta.env.BASE_URL}images/photos/manufacturing-student-angle-grinder.jpg`}
+        src="/images/photos/manufacturing-student-angle-grinder.jpg"
         alt=""
         class="w-full h-full object-cover opacity-25 object-[center_30%] scale-105"
       />
@@ -51,7 +50,7 @@ const featuredPathways = pathways.filter(p => p.slug !== 'health-care-admin').sl
         <!-- CTAs -->
         <div class="reveal flex flex-col sm:flex-row gap-4 mt-10" style="animation-delay: 500ms">
           <a
-            href={base("pathways")}
+            href="/pathways"
             class="group inline-flex items-center gap-2 px-7 py-3.5 text-sm font-semibold uppercase tracking-wider bg-brand-copper text-white rounded-lg hover:bg-brand-copper/90 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-xl hover:shadow-brand-copper/25"
           >
             Explore Pathways
@@ -60,7 +59,7 @@ const featuredPathways = pathways.filter(p => p.slug !== 'health-care-admin').sl
             </svg>
           </a>
           <a
-            href={base("partners")}
+            href="/partners"
             class="inline-flex items-center gap-2 px-7 py-3.5 text-sm font-semibold uppercase tracking-wider border border-white/20 text-white/70 rounded-lg hover:border-white/40 hover:text-white hover:bg-white/5 transition-all duration-300"
           >
             Become a Partner
@@ -132,7 +131,7 @@ const featuredPathways = pathways.filter(p => p.slug !== 'health-care-admin').sl
           <p class="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-copper mb-3">12 Career Pathways</p>
           <h2 class="text-3xl md:text-5xl font-[Schibsted_Grotesk] font-extrabold text-white tracking-tight">Built for the Real World</h2>
         </div>
-        <a href={base("pathways")} class="group flex items-center gap-2 text-sm font-semibold text-white/50 hover:text-brand-copper transition-colors">
+        <a href="/pathways" class="group flex items-center gap-2 text-sm font-semibold text-white/50 hover:text-brand-copper transition-colors">
           View all pathways
           <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -151,7 +150,7 @@ const featuredPathways = pathways.filter(p => p.slug !== 'health-care-admin').sl
         ))}
       </div>
       <div class="mt-10 text-center sm:hidden">
-        <a href={base("pathways")} class="text-brand-copper font-semibold hover:underline">View all 12 pathways &rarr;</a>
+        <a href="/pathways" class="text-brand-copper font-semibold hover:underline">View all 12 pathways &rarr;</a>
       </div>
     </div>
   </section>
@@ -237,13 +236,13 @@ const featuredPathways = pathways.filter(p => p.slug !== 'health-care-admin').sl
         ].map((partner) => (
           <span class="bg-white border border-gray-200/60 px-4 py-2 rounded-full text-sm text-brand-slate/60 hover:border-brand-copper/30 hover:text-brand-navy transition-all duration-300 cursor-default">{partner}</span>
         ))}
-        <a href={base("partners")} class="bg-brand-copper/10 border border-brand-copper/20 text-brand-copper px-4 py-2 rounded-full text-sm font-semibold hover:bg-brand-copper/20 transition-colors">
+        <a href="/partners" class="bg-brand-copper/10 border border-brand-copper/20 text-brand-copper px-4 py-2 rounded-full text-sm font-semibold hover:bg-brand-copper/20 transition-colors">
           and more →
         </a>
       </div>
       <div class="on-scroll mt-10 text-center">
         <a
-          href={base("partners")}
+          href="/partners"
           class="group inline-flex items-center gap-2 px-7 py-3.5 text-sm font-semibold uppercase tracking-wider bg-brand-navy text-white rounded-lg hover:bg-brand-steel transition-all duration-300 hover:translate-y-[-2px] hover:shadow-xl hover:shadow-brand-navy/25"
         >
           Become a Partner

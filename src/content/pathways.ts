@@ -26,10 +26,10 @@ export const pathways: Pathway[] = [
     name: "Building & Construction Trades",
     sector: "Building & Construction Trades",
     school: "Beaumont HS",
-    photo: "images/photos/construction-framing-hard-hats.jpg",
+    photo: "/images/photos/construction-framing-hard-hats.jpg",
     instructor: {
       name: "Jeremy Rager",
-      headshot: "images/photos/headshot-staff-beaumont-hs-tee.jpg",
+      headshot: "/images/photos/headshot-staff-beaumont-hs-tee.jpg",
       industry: [
         "5th generation Contractor",
         "3rd generation custom woodworker/cabinetry",
@@ -68,10 +68,10 @@ export const pathways: Pathway[] = [
     name: "Culinary Arts",
     sector: "Hospitality, Tourism & Recreation",
     school: "Beaumont HS",
-    photo: "images/photos/culinary-food-truck-exterior.jpg",
+    photo: "/images/photos/culinary-food-truck-exterior.jpg",
     instructor: {
       name: "Jonathon Wiener & Jasmin Diaz",
-      headshot: "images/photos/headshot-staff-culinary-apron.jpg",
+      headshot: "/images/photos/headshot-staff-culinary-apron.jpg",
       industry: [
         "Le Cordon Bleu College Chef Training",
         "Michelin-starred restaurants: Alinea (3-star), Domaine Chandon (1-star), Le Comptoir (1-star)",
@@ -118,10 +118,10 @@ export const pathways: Pathway[] = [
     name: "Digital Media & Game Design",
     sector: "Arts, Media & Entertainment",
     school: "Beaumont HS",
-    photo: "images/photos/game-design-students-computer-lab.jpg",
+    photo: "/images/photos/game-design-students-computer-lab.jpg",
     instructor: {
       name: "Christian Bonilla",
-      headshot: "images/photos/headshot-staff-blue-shirt.jpg",
+      headshot: "/images/photos/headshot-staff-blue-shirt.jpg",
       industry: [
         "8 years Arts, Media & Entertainment experience",
         "Graphic Designer",
@@ -161,10 +161,10 @@ export const pathways: Pathway[] = [
     name: "Digital Video Production",
     sector: "Arts, Media & Entertainment",
     school: "Beaumont HS",
-    photo: "images/photos/broadcast-studio-wide-shot.jpg",
+    photo: "/images/photos/broadcast-studio-wide-shot.jpg",
     instructor: {
       name: "Casey McBeath",
-      headshot: "images/photos/headshot-staff-beard-hoodie.jpg",
+      headshot: "/images/photos/headshot-staff-beard-hoodie.jpg",
       industry: [
         "12+ years video production experience",
         "Hollywood feature films: The Hunger Games (Catching Fire, Mockingjay 1+2), Into the Woods, Tomorrowland, The Fault in Our Stars",
@@ -203,10 +203,10 @@ export const pathways: Pathway[] = [
     name: "Education & Family Services",
     sector: "Education, Child Development & Family Services",
     school: "Beaumont HS",
-    photo: "images/photos/performing-arts-script-reading.jpg",
+    photo: "/images/photos/performing-arts-script-reading.jpg",
     instructor: {
       name: "Aimee Downer",
-      headshot: "images/photos/headshot-staff-navy-sweater.png",
+      headshot: "/images/photos/headshot-staff-navy-sweater.png",
       industry: [
         "29 years teaching",
         "Bachelor's in English, Master's in Art of Teaching English",
@@ -248,10 +248,10 @@ export const pathways: Pathway[] = [
     name: "Public Safety: Law Enforcement",
     sector: "Public Services",
     school: "Beaumont HS",
-    photo: "images/photos/law-enforcement-students-simulation.jpg",
+    photo: "/images/photos/law-enforcement-students-simulation.jpg",
     instructor: {
       name: "Boris Robinson",
-      headshot: "images/photos/headshot-staff-white-polo.jpg",
+      headshot: "/images/photos/headshot-staff-white-polo.jpg",
       industry: [
         "Retired Chief Deputy, Riverside County Sheriff's Department (1987-2012)",
         "Deputy Chief, Marine Corps Police Department (2019-2021)",
@@ -288,10 +288,10 @@ export const pathways: Pathway[] = [
     name: "Manufacturing & Engineering",
     sector: "Manufacturing & Product Development",
     school: "Beaumont HS",
-    photo: "images/photos/manufacturing-student-angle-grinder.jpg",
+    photo: "/images/photos/manufacturing-student-angle-grinder.jpg",
     instructor: {
       name: "Matt Medore",
-      headshot: "images/photos/headshot-staff-beaumont-polo.jpg",
+      headshot: "/images/photos/headshot-staff-beaumont-polo.jpg",
       industry: [
         "Family-owned WWII aircraft restoration business",
         "22 years in bicycle industry (design, manufacturing, product development)",
@@ -340,10 +340,10 @@ export const pathways: Pathway[] = [
     name: "Patient Care",
     sector: "Health Science & Medical Technology",
     school: "Beaumont HS",
-    photo: "images/photos/patient-care-anatomy-lab-coats.jpg",
+    photo: "/images/photos/patient-care-anatomy-lab-coats.jpg",
     instructor: {
       name: "Christine Guevara",
-      headshot: "images/photos/headshot-staff-navy-blouse.jpg",
+      headshot: "/images/photos/headshot-staff-navy-blouse.jpg",
       industry: [
         "20+ years as an occupational therapist",
         "Specialty in neurological disorders",
@@ -393,10 +393,10 @@ export const pathways: Pathway[] = [
     name: "Performing Arts",
     sector: "Arts, Media & Entertainment",
     school: "Beaumont HS",
-    photo: "images/photos/performing-arts-western-scene.jpg",
+    photo: "/images/photos/performing-arts-western-scene.jpg",
     instructor: {
       name: "Sarah Gray & Pam Bernard",
-      headshot: "images/photos/headshot-staff-bw-portrait.jpg",
+      headshot: "/images/photos/headshot-staff-bw-portrait.jpg",
       industry: [
         "20+ years industry experience (acting, dancing, stage management, directing, producing)",
         "Productions in Santa Cruz, San Francisco, Washington DC, and Berkeley",
@@ -442,10 +442,10 @@ export const pathways: Pathway[] = [
     name: "Sports Medicine",
     sector: "Health Science & Medical Technology",
     school: "Beaumont HS",
-    photo: "images/photos/sports-medicine-ankle-taping.jpg",
+    photo: "/images/photos/sports-medicine-ankle-taping.jpg",
     instructor: {
       name: "Nicole Calderilla",
-      headshot: "images/photos/headshot-staff-cougar-tee.jpg",
+      headshot: "/images/photos/headshot-staff-cougar-tee.jpg",
       industry: [
         "15+ years Athletic Training",
         "Riverside City College Athletic Trainer",
@@ -487,10 +487,10 @@ export const pathways: Pathway[] = [
     name: "Technical Theater",
     sector: "Arts, Media & Entertainment",
     school: "Beaumont HS",
-    photo: "images/photos/technical-theater-spotlight-operator.jpg",
+    photo: "/images/photos/technical-theater-spotlight-operator.jpg",
     instructor: {
       name: "Daniel West",
-      headshot: "images/photos/headshot-staff-black-polo-blue-bg.jpg",
+      headshot: "/images/photos/headshot-staff-black-polo-blue-bg.jpg",
       industry: [
         "10 years as professional Technical Director, Scenic, Lighting, Properties, and Sound Designer",
         "Diocese of Orange County",
@@ -532,7 +532,7 @@ export const pathways: Pathway[] = [
     name: "Health Care Administrative Services",
     sector: "Health Science & Medical Technology",
     school: "Glen View HS",
-    photo: "images/photos/patient-care-students-medical-office.jpg",
+    photo: "/images/photos/patient-care-students-medical-office.jpg",
     instructor: {
       name: "TBD",
       headshot: "",

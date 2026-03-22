@@ -1,12 +1,11 @@
 ---
-import { base } from '../utils/base';
 const navItems = [
-  { label: "Pathways", href: base("pathways") },
-  { label: "Students", href: base("students") },
-  { label: "Parents", href: base("parents") },
-  { label: "Partners", href: base("partners") },
-  { label: "Results", href: base("results") },
-  { label: "About", href: base("about") },
+  { label: "Pathways", href: "/pathways" },
+  { label: "Students", href: "/students" },
+  { label: "Parents", href: "/parents" },
+  { label: "Partners", href: "/partners" },
+  { label: "Results", href: "/results" },
+  { label: "About", href: "/about" },
 ];
 ---
 
@@ -14,7 +13,7 @@ const navItems = [
   <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
     <div class="flex items-center justify-between h-18 md:h-20">
       <!-- Logo -->
-      <a href={base("")} class="flex items-center gap-3 group relative z-10">
+      <a href="/" class="flex items-center gap-3 group relative z-10">
         <div class="relative">
           <div class="w-10 h-10 bg-brand-copper rounded-lg flex items-center justify-center font-[Schibsted_Grotesk] font-extrabold text-white text-lg rotate-[-2deg] group-hover:rotate-0 transition-transform duration-300">B</div>
         </div>
@@ -36,7 +35,7 @@ const navItems = [
           </a>
         ))}
         <a
-          href={base("contact")}
+          href="/contact"
           class="ml-4 px-5 py-2 text-[13px] font-semibold uppercase tracking-[0.08em] bg-brand-copper text-white rounded-lg hover:bg-brand-copper/90 transition-all duration-200 hover:translate-y-[-1px] hover:shadow-lg hover:shadow-brand-copper/20"
         >
           Get Started
@@ -72,7 +71,7 @@ const navItems = [
         </a>
       ))}
       <a
-        href={base("contact")}
+        href="/contact"
         class="mt-4 px-8 py-3 text-sm font-semibold uppercase tracking-widest bg-brand-copper text-white rounded-lg"
       >
         Get Started
