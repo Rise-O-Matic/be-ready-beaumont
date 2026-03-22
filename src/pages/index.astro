@@ -1,4 +1,5 @@
 ---
+import { base } from '../utils/base';
 import Base from '../layouts/Base.astro';
 import StatBar from '../components/StatBar.astro';
 import PathwayCard from '../components/PathwayCard.astro';
@@ -13,8 +14,7 @@ const featuredPathways = pathways.filter(p => p.slug !== 'health-care-admin').sl
     <!-- Background image -->
     <div class="absolute inset-0">
       <img
-        src="/images/photos/manufacturing-student-angle-grinder.jpg"
-        alt=""
+        src={base("images/photos/manufacturing-student-angle-grinder.jpg") }        alt=""
         class="w-full h-full object-cover opacity-25 object-[center_30%] scale-105"
       />
       <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/85 to-brand-dark/40"></div>
@@ -50,7 +50,7 @@ const featuredPathways = pathways.filter(p => p.slug !== 'health-care-admin').sl
         <!-- CTAs -->
         <div class="reveal flex flex-col sm:flex-row gap-4 mt-10" style="animation-delay: 500ms">
           <a
-            href="/pathways"
+            href={base("pathways")}
             class="group inline-flex items-center gap-2 px-7 py-3.5 text-sm font-semibold uppercase tracking-wider bg-brand-copper text-white rounded-lg hover:bg-brand-copper/90 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-xl hover:shadow-brand-copper/25"
           >
             Explore Pathways
@@ -59,7 +59,7 @@ const featuredPathways = pathways.filter(p => p.slug !== 'health-care-admin').sl
             </svg>
           </a>
           <a
-            href="/partners"
+            href={base("partners")}
             class="inline-flex items-center gap-2 px-7 py-3.5 text-sm font-semibold uppercase tracking-wider border border-white/20 text-white/70 rounded-lg hover:border-white/40 hover:text-white hover:bg-white/5 transition-all duration-300"
           >
             Become a Partner
@@ -94,9 +94,9 @@ const featuredPathways = pathways.filter(p => p.slug !== 'health-care-admin').sl
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5 stagger">
         {[
-          { href: "/students", label: "I'm a Student", desc: "Discover which pathway matches your strengths, interests, and values.", accent: "brand-copper", icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" },
-          { href: "/parents", label: "I'm a Parent", desc: "Understand why CTE matters and how it prepares your student for the future.", accent: "brand-amber", icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" },
-          { href: "/partners", label: "I'm a Business", desc: "Partner with us to shape the next generation of your workforce.", accent: "brand-teal", icon: "M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" },
+          { href: base("students"), label: "I'm a Student", desc: "Discover which pathway matches your strengths, interests, and values.", accent: "brand-copper", icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" },
+          { href: base("parents"), label: "I'm a Parent", desc: "Understand why CTE matters and how it prepares your student for the future.", accent: "brand-amber", icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" },
+          { href: base("partners"), label: "I'm a Business", desc: "Partner with us to shape the next generation of your workforce.", accent: "brand-teal", icon: "M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" },
         ].map((item) => (
           <a
             href={item.href}
@@ -131,7 +131,7 @@ const featuredPathways = pathways.filter(p => p.slug !== 'health-care-admin').sl
           <p class="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-copper mb-3">12 Career Pathways</p>
           <h2 class="text-3xl md:text-5xl font-[Schibsted_Grotesk] font-extrabold text-white tracking-tight">Built for the Real World</h2>
         </div>
-        <a href="/pathways" class="group flex items-center gap-2 text-sm font-semibold text-white/50 hover:text-brand-copper transition-colors">
+        <a href={base("pathways")} class="group flex items-center gap-2 text-sm font-semibold text-white/50 hover:text-brand-copper transition-colors">
           View all pathways
           <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -150,7 +150,7 @@ const featuredPathways = pathways.filter(p => p.slug !== 'health-care-admin').sl
         ))}
       </div>
       <div class="mt-10 text-center sm:hidden">
-        <a href="/pathways" class="text-brand-copper font-semibold hover:underline">View all 12 pathways &rarr;</a>
+        <a href={base("pathways")} class="text-brand-copper font-semibold hover:underline">View all 12 pathways &rarr;</a>
       </div>
     </div>
   </section>
@@ -236,13 +236,13 @@ const featuredPathways = pathways.filter(p => p.slug !== 'health-care-admin').sl
         ].map((partner) => (
           <span class="bg-white border border-gray-200/60 px-4 py-2 rounded-full text-sm text-brand-slate/60 hover:border-brand-copper/30 hover:text-brand-navy transition-all duration-300 cursor-default">{partner}</span>
         ))}
-        <a href="/partners" class="bg-brand-copper/10 border border-brand-copper/20 text-brand-copper px-4 py-2 rounded-full text-sm font-semibold hover:bg-brand-copper/20 transition-colors">
+        <a href={base("partners")} class="bg-brand-copper/10 border border-brand-copper/20 text-brand-copper px-4 py-2 rounded-full text-sm font-semibold hover:bg-brand-copper/20 transition-colors">
           and more →
         </a>
       </div>
       <div class="on-scroll mt-10 text-center">
         <a
-          href="/partners"
+          href={base("partners")}
           class="group inline-flex items-center gap-2 px-7 py-3.5 text-sm font-semibold uppercase tracking-wider bg-brand-navy text-white rounded-lg hover:bg-brand-steel transition-all duration-300 hover:translate-y-[-2px] hover:shadow-xl hover:shadow-brand-navy/25"
         >
           Become a Partner
