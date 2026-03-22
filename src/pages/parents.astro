@@ -1,0 +1,122 @@
+---
+import Base from '../layouts/Base.astro';
+import StatBar from '../components/StatBar.astro';
+---
+
+<Base title="For Parents" description="Why CTE matters and how it prepares your student for the future.">
+  <section class="bg-brand-navy text-white py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl md:text-5xl font-black">Why CTE Matters</h1>
+      <p class="mt-4 text-lg text-white/70 max-w-2xl">
+        Career Technical Education isn't a lesser track — it's a faster one.
+        Your student graduates with skills, certifications, college credit, and direction.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-3xl font-black text-brand-navy">This Isn't Your Parents' Shop Class</h2>
+        <p class="text-brand-slate/80 leading-relaxed">
+          The job market has fundamentally changed. The World Economic Forum identifies critical thinking,
+          collaboration, and technical skills as the fastest-growing competencies employers need. A degree
+          alone doesn't guarantee a career — but skills do.
+        </p>
+        <p class="text-brand-slate/80 leading-relaxed">
+          Be Ready Beaumont's CTE pathways give your student a head start. They'll learn from industry
+          professionals — a Michelin-starred chef, a Hollywood filmmaker, an FBI Academy graduate — in
+          facilities equipped with professional-grade tools: CNC machines, broadcast studios, industrial
+          kitchens, and a student-run food truck.
+        </p>
+
+        <div class="not-prose my-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-brand-light rounded-xl p-6">
+            <h3 class="font-bold text-brand-navy mb-3">What Students Earn</h3>
+            <ul class="space-y-2">
+              {[
+                "Industry-recognized certifications (OSHA 10, ServSafe, Autodesk Fusion 360)",
+                "College credit through Mt. San Jacinto College (dual enrollment and articulated courses)",
+                "Work-based learning experience with 30+ local partners",
+                "Pre-apprenticeship completions (46 students this year)",
+                "California Department of Apprenticeship Standards credentials",
+              ].map((item) => (
+                <li class="flex items-start gap-2 text-sm text-brand-slate/80">
+                  <svg class="w-4 h-4 text-brand-blue mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="bg-brand-light rounded-xl p-6">
+            <h3 class="font-bold text-brand-navy mb-3">What Makes Us Different</h3>
+            <ul class="space-y-2">
+              {[
+                "Career exploration starts in elementary school, not senior year",
+                "Holland's RIASEC framework matches pathways to your student's strengths and values",
+                "Every instructor has real industry experience — they're not teaching from a textbook",
+                "CSBA Golden Bell Award winner — recognized as one of the best CTE programs in California",
+                "$11.6 million in grants invested since 2016-17",
+              ].map((item) => (
+                <li class="flex items-start gap-2 text-sm text-brand-slate/80">
+                  <svg class="w-4 h-4 text-brand-gold mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <h2 class="text-3xl font-black text-brand-navy">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-4">
+        {[
+          {
+            q: "Will CTE limit my student's college options?",
+            a: "No — CTE enhances them. Students earn college credit through dual enrollment with MSJC while still in high school. Many CTE completers go on to four-year universities with a competitive advantage: real skills and work experience on top of their academic record.",
+          },
+          {
+            q: "Is this only for students who don't want to go to college?",
+            a: "Absolutely not. CTE is for every student. Whether they're headed to a university, community college, apprenticeship, or directly into the workforce, the skills they build — critical thinking, collaboration, technical expertise — are universally valuable.",
+          },
+          {
+            q: "How do students choose a pathway?",
+            a: "It starts with self-discovery. Beginning in elementary school, students explore their strengths, interests, and values through the Pathful platform and Holland's RIASEC assessments. By the time they reach high school, they have a genuine understanding of which pathways align with who they are.",
+          },
+          {
+            q: "What certifications can students earn?",
+            a: "Depends on the pathway. Examples include OSHA 10 (Construction), ServSafe Food Safety Manager (Culinary), Autodesk Fusion 360 (Manufacturing — 96% pass rate), Riverside County Food Handlers Card, and Basic Life Support certification.",
+          },
+          {
+            q: "Can my student switch pathways?",
+            a: "Yes. Career exploration is a journey, and students evolve. While committing to a pathway produces the best outcomes (and earns the pathway completion credential), students can explore different pathways, especially in the early stages.",
+          },
+        ].map((faq) => (
+          <details class="bg-brand-light rounded-xl p-6 group">
+            <summary class="font-bold text-brand-navy cursor-pointer list-none flex items-center justify-between">
+              {faq.q}
+              <svg class="w-5 h-5 text-brand-slate/40 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-3 text-sm text-brand-slate/70 leading-relaxed">{faq.a}</p>
+          </details>
+        ))}
+      </div>
+
+      <div class="mt-12 bg-brand-gold/10 rounded-2xl p-8 border border-brand-gold/20 text-center">
+        <h3 class="text-xl font-bold text-brand-navy">Want to Learn More?</h3>
+        <p class="text-sm text-brand-slate/70 mt-2">Contact us to discuss how CTE can be part of your student's plan.</p>
+        <div class="mt-4 flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="/pathways" class="px-5 py-2.5 text-sm font-bold bg-brand-navy text-white rounded-lg hover:bg-brand-slate transition-colors">Explore Pathways</a>
+          <a href="/contact" class="px-5 py-2.5 text-sm font-bold bg-brand-gold text-brand-navy rounded-lg hover:bg-amber-400 transition-colors">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

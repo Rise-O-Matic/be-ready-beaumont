@@ -1,0 +1,33 @@
+---
+import Base from '../../layouts/Base.astro';
+import PathwayCard from '../../components/PathwayCard.astro';
+import { pathways } from '../../content/pathways';
+---
+
+<Base title="CTE Pathways" description="Explore 12 career pathways across 7 industry sectors at Beaumont USD.">
+  <section class="bg-brand-navy text-white py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl md:text-5xl font-black">Our Pathways</h1>
+      <p class="mt-4 text-lg text-white/70 max-w-2xl">
+        12 career pathways across 7 industry sectors. Each one taught by professionals
+        who came from the industry they're teaching. Pick the one that fits who you are.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {pathways.map((p) => (
+          <PathwayCard
+            slug={p.slug}
+            name={p.name}
+            sector={p.sector}
+            photo={p.photo}
+            description={p.description}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>

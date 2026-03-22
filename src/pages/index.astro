@@ -1,0 +1,256 @@
+---
+import Base from '../layouts/Base.astro';
+import StatBar from '../components/StatBar.astro';
+import PathwayCard from '../components/PathwayCard.astro';
+import { pathways } from '../content/pathways';
+
+const featuredPathways = pathways.filter(p => p.slug !== 'health-care-admin').slice(0, 6);
+---
+
+<Base title="Home">
+  <!-- ===== HERO ===== -->
+  <section class="relative min-h-[100vh] flex items-center bg-brand-dark overflow-hidden grain">
+    <!-- Background image -->
+    <div class="absolute inset-0">
+      <img
+        src="/images/photos/manufacturing-student-angle-grinder.jpg"
+        alt=""
+        class="w-full h-full object-cover opacity-25 object-[center_30%] scale-105"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/85 to-brand-dark/40"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-brand-dark/50"></div>
+    </div>
+
+    <!-- Decorative side line -->
+    <div class="absolute left-8 lg:left-16 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-brand-copper/30 to-transparent hidden md:block"></div>
+
+    <div class="relative z-10 max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 py-32 md:py-40">
+      <div class="max-w-3xl">
+        <!-- Badge -->
+        <div class="reveal inline-flex items-center gap-2 bg-brand-copper/15 border border-brand-copper/30 text-brand-copper px-4 py-1.5 rounded-full text-[13px] font-semibold tracking-wide mb-8 badge-glow">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          Golden Bell Award Winner 2024
+        </div>
+
+        <!-- Headline -->
+        <h1 class="font-[Syne] font-extrabold leading-[0.95] tracking-tight">
+          <span class="reveal block text-[clamp(2.5rem,7vw,5.5rem)] text-white">Real Life.</span>
+          <span class="reveal block text-[clamp(2.5rem,7vw,5.5rem)] text-white" style="animation-delay: 100ms">Real World.</span>
+          <span class="reveal block text-[clamp(2.5rem,7vw,5.5rem)] text-brand-copper" style="animation-delay: 200ms">Real Careers.</span>
+        </h1>
+
+        <!-- Sub -->
+        <p class="reveal mt-8 text-lg md:text-xl text-white/60 max-w-xl leading-relaxed font-light" style="animation-delay: 350ms">
+          12 pathways. Instructors from Michelin-starred kitchens, Hollywood sets,
+          and FBI academies. Students building real skills for real careers.
+        </p>
+
+        <!-- CTAs -->
+        <div class="reveal flex flex-col sm:flex-row gap-4 mt-10" style="animation-delay: 500ms">
+          <a
+            href="/pathways"
+            class="group inline-flex items-center gap-2 px-7 py-3.5 text-sm font-semibold uppercase tracking-wider bg-brand-copper text-white rounded-lg hover:bg-brand-copper/90 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-xl hover:shadow-brand-copper/25"
+          >
+            Explore Pathways
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <a
+            href="/partners"
+            class="inline-flex items-center gap-2 px-7 py-3.5 text-sm font-semibold uppercase tracking-wider border border-white/20 text-white/70 rounded-lg hover:border-white/40 hover:text-white hover:bg-white/5 transition-all duration-300"
+          >
+            Become a Partner
+          </a>
+        </div>
+      </div>
+
+      <!-- Floating stat on right (desktop) -->
+      <div class="hidden lg:block absolute right-12 bottom-16 text-right slide-right" style="animation-delay: 600ms">
+        <div class="text-[72px] font-[Syne] font-extrabold text-brand-copper leading-none">$11.6M</div>
+        <div class="text-sm text-white/40 uppercase tracking-widest mt-1">In grants since 2016</div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 reveal" style="animation-delay: 900ms">
+      <div class="w-5 h-8 border border-white/20 rounded-full flex justify-center pt-1.5">
+        <div class="w-1 h-2 bg-white/40 rounded-full animate-bounce"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS BAR ===== -->
+  <StatBar />
+
+  <!-- ===== AUDIENCE PATHS ===== -->
+  <section class="py-20 md:py-32 bg-brand-cream">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="on-scroll text-center mb-16">
+        <p class="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-copper mb-3">Who Are You?</p>
+        <h2 class="text-3xl md:text-5xl font-[Syne] font-extrabold text-brand-navy tracking-tight">Find Your Path</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 stagger">
+        {[
+          { href: "/students", label: "I'm a Student", desc: "Discover which pathway matches your strengths, interests, and values.", accent: "brand-copper", icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" },
+          { href: "/parents", label: "I'm a Parent", desc: "Understand why CTE matters and how it prepares your student for the future.", accent: "brand-amber", icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" },
+          { href: "/partners", label: "I'm a Business", desc: "Partner with us to shape the next generation of your workforce.", accent: "brand-teal", icon: "M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" },
+        ].map((item) => (
+          <a
+            href={item.href}
+            class="on-scroll group relative bg-white rounded-2xl p-8 md:p-10 border border-gray-200/60 hover:border-brand-copper/30 transition-all duration-500 hover:shadow-2xl hover:shadow-brand-copper/5 hover:-translate-y-1 overflow-hidden"
+          >
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-brand-copper to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+            <div class={`w-14 h-14 rounded-xl flex items-center justify-center mb-5 bg-${item.accent}/10`}>
+              <svg class={`w-7 h-7 text-${item.accent}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={item.icon} />
+              </svg>
+            </div>
+            <h3 class="text-xl font-[Syne] font-bold text-brand-navy group-hover:text-brand-copper transition-colors duration-300">{item.label}</h3>
+            <p class="text-sm text-brand-slate/60 mt-2 leading-relaxed">{item.desc}</p>
+            <div class="mt-5 flex items-center gap-1 text-[13px] font-semibold text-brand-copper opacity-0 group-hover:opacity-100 translate-x-[-8px] group-hover:translate-x-0 transition-all duration-300">
+              Learn more
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PATHWAYS ===== -->
+  <section class="relative py-20 md:py-32 bg-brand-navy grain overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-copper/5 rounded-full blur-3xl"></div>
+    <div class="relative z-10 max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="on-scroll flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-12">
+        <div>
+          <p class="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-copper mb-3">12 Career Pathways</p>
+          <h2 class="text-3xl md:text-5xl font-[Syne] font-extrabold text-white tracking-tight">Built for the Real World</h2>
+        </div>
+        <a href="/pathways" class="group flex items-center gap-2 text-sm font-semibold text-white/50 hover:text-brand-copper transition-colors">
+          View all pathways
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {featuredPathways.map((p) => (
+          <PathwayCard
+            slug={p.slug}
+            name={p.name}
+            sector={p.sector}
+            photo={p.photo}
+            description={p.description}
+          />
+        ))}
+      </div>
+      <div class="mt-10 text-center sm:hidden">
+        <a href="/pathways" class="text-brand-copper font-semibold hover:underline">View all 12 pathways &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY ===== -->
+  <section class="py-20 md:py-32 bg-brand-cream overflow-hidden">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="on-scroll max-w-3xl mx-auto text-center mb-16">
+        <p class="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-copper mb-3">The Difference</p>
+        <h2 class="text-3xl md:text-5xl font-[Syne] font-extrabold text-brand-navy tracking-tight">Why Be Ready Beaumont?</h2>
+        <p class="mt-6 text-lg text-brand-slate/60 leading-relaxed">
+          The job market has shifted. Employers want skills — critical thinking, collaboration,
+          innovation. We start building those in elementary school.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          {
+            title: "Starts Early",
+            desc: "Career exploration begins in elementary school through the Pathful platform and Holland's RIASEC framework — not as an afterthought in senior year.",
+            num: "01",
+          },
+          {
+            title: "Industry Instructors",
+            desc: "Your teachers worked at Michelin-starred restaurants, on Hollywood sets, and in FBI academies. They know the real world because they came from it.",
+            num: "02",
+          },
+          {
+            title: "College Credit Built In",
+            desc: "Dual enrollment and articulated courses through Mt. San Jacinto College. 571 students already earning college credit.",
+            num: "03",
+          },
+        ].map((item) => (
+          <div class="on-scroll group relative bg-white rounded-2xl p-8 border border-gray-200/60 hover:border-brand-copper/20 transition-all duration-500 hover:shadow-xl">
+            <span class="text-[64px] font-[Syne] font-extrabold text-brand-light leading-none absolute top-4 right-6 select-none group-hover:text-brand-copper/10 transition-colors">{item.num}</span>
+            <div class="relative">
+              <h3 class="text-xl font-[Syne] font-bold text-brand-navy mt-8">{item.title}</h3>
+              <p class="text-sm text-brand-slate/60 mt-3 leading-relaxed">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUOTE ===== -->
+  <section class="relative py-24 md:py-36 bg-brand-dark overflow-hidden grain">
+    <!-- Decorative elements -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-copper/5 rounded-full blur-[120px]"></div>
+    <div class="absolute top-12 left-12 text-[200px] font-[Syne] font-extrabold text-white/[0.02] leading-none select-none">"</div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-5 sm:px-8 lg:px-12 text-center on-scroll">
+      <blockquote class="text-xl md:text-3xl font-[Syne] font-medium leading-relaxed text-white/85 tracking-tight">
+        "Be Ready Beaumont is about supporting students in who they are as
+        <span class="marker">unique and amazing individuals</span>, fueling their passion,
+        and maximizing their opportunities for success."
+      </blockquote>
+      <div class="mt-8 flex flex-col items-center">
+        <div class="w-12 h-px bg-brand-copper mb-4"></div>
+        <cite class="text-brand-copper font-[Syne] font-bold text-lg not-italic">Dr. Michael Breyer</cite>
+        <span class="text-[13px] text-white/30 uppercase tracking-widest mt-1">Director, College & Career Readiness</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PARTNERS ===== -->
+  <section class="py-20 md:py-32 bg-brand-cream">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="on-scroll text-center mb-12">
+        <p class="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-copper mb-3">Community</p>
+        <h2 class="text-3xl md:text-5xl font-[Syne] font-extrabold text-brand-navy tracking-tight">30+ Partners</h2>
+        <p class="mt-4 text-lg text-brand-slate/60 max-w-xl mx-auto">
+          Local businesses opening doors for work-based learning, mentorship, and real-world experience.
+        </p>
+      </div>
+      <div class="on-scroll flex flex-wrap justify-center gap-2.5 max-w-4xl mx-auto">
+        {[
+          "Chamberlain Family Orthodontics", "City of Beaumont", "ENOVA Create",
+          "Habitat for Humanity", "Highland Springs Ranch", "LifeStream Blood Bank",
+          "Marketplace Physical Therapy", "Movement For Life", "Props AV",
+          "Rancho Paseo Medical Group", "RISCO Inc.", "Sorenson Engineering",
+          "Riverside University Health System", "123 Farm",
+        ].map((partner) => (
+          <span class="bg-white border border-gray-200/60 px-4 py-2 rounded-full text-sm text-brand-slate/60 hover:border-brand-copper/30 hover:text-brand-navy transition-all duration-300 cursor-default">{partner}</span>
+        ))}
+        <a href="/partners" class="bg-brand-copper/10 border border-brand-copper/20 text-brand-copper px-4 py-2 rounded-full text-sm font-semibold hover:bg-brand-copper/20 transition-colors">
+          and more →
+        </a>
+      </div>
+      <div class="on-scroll mt-10 text-center">
+        <a
+          href="/partners"
+          class="group inline-flex items-center gap-2 px-7 py-3.5 text-sm font-semibold uppercase tracking-wider bg-brand-navy text-white rounded-lg hover:bg-brand-steel transition-all duration-300 hover:translate-y-[-2px] hover:shadow-xl hover:shadow-brand-navy/25"
+        >
+          Become a Partner
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>

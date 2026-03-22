@@ -1,0 +1,111 @@
+---
+const navItems = [
+  { label: "Pathways", href: "/pathways" },
+  { label: "Students", href: "/students" },
+  { label: "Parents", href: "/parents" },
+  { label: "Partners", href: "/partners" },
+  { label: "Results", href: "/results" },
+  { label: "About", href: "/about" },
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="site-header">
+  <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
+    <div class="flex items-center justify-between h-18 md:h-20">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3 group relative z-10">
+        <div class="relative">
+          <div class="w-10 h-10 bg-brand-copper rounded-lg flex items-center justify-center font-[Syne] font-extrabold text-white text-lg rotate-[-2deg] group-hover:rotate-0 transition-transform duration-300">B</div>
+        </div>
+        <div class="hidden sm:block">
+          <div class="font-[Syne] font-bold text-[15px] leading-tight tracking-tight text-white">Be Ready Beaumont</div>
+          <div class="text-[11px] uppercase tracking-[0.2em] text-white/40 font-medium">CTE Pathways</div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-0.5">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class="px-3 py-2 text-[13px] font-medium uppercase tracking-[0.08em] text-white/60 hover:text-white transition-colors duration-200 relative group"
+          >
+            {item.label}
+            <span class="absolute bottom-1 left-3 right-3 h-px bg-brand-copper scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+          </a>
+        ))}
+        <a
+          href="/contact"
+          class="ml-4 px-5 py-2 text-[13px] font-semibold uppercase tracking-[0.08em] bg-brand-copper text-white rounded-lg hover:bg-brand-copper/90 transition-all duration-200 hover:translate-y-[-1px] hover:shadow-lg hover:shadow-brand-copper/20"
+        >
+          Get Started
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-btn"
+        class="md:hidden relative z-10 p-2 text-white/70 hover:text-white transition-colors"
+        aria-label="Open menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="menu-icon-open">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h10M4 18h16" />
+        </svg>
+        <svg class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="menu-icon-close">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden fixed inset-0 bg-brand-dark/98 backdrop-blur-sm z-40">
+    <div class="flex flex-col items-center justify-center h-full gap-6">
+      {navItems.map((item, i) => (
+        <a
+          href={item.href}
+          class="text-2xl font-[Syne] font-bold text-white/70 hover:text-brand-copper transition-colors"
+          style={`animation-delay: ${i * 60}ms`}
+        >
+          {item.label}
+        </a>
+      ))}
+      <a
+        href="/contact"
+        class="mt-4 px-8 py-3 text-sm font-semibold uppercase tracking-widest bg-brand-copper text-white rounded-lg"
+      >
+        Get Started
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Header scroll behavior
+  const header = document.getElementById('site-header');
+  let lastScroll = 0;
+  const onScroll = () => {
+    const y = window.scrollY;
+    if (y > 60) {
+      header?.classList.add('bg-brand-dark/95', 'backdrop-blur-md', 'shadow-2xl', 'shadow-black/20');
+    } else {
+      header?.classList.remove('bg-brand-dark/95', 'backdrop-blur-md', 'shadow-2xl', 'shadow-black/20');
+    }
+    lastScroll = y;
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Mobile menu
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('menu-icon-open');
+  const iconClose = document.getElementById('menu-icon-close');
+  btn?.addEventListener('click', () => {
+    const isOpen = !menu?.classList.contains('hidden');
+    menu?.classList.toggle('hidden');
+    iconOpen?.classList.toggle('hidden');
+    iconClose?.classList.toggle('hidden');
+    document.body.style.overflow = isOpen ? '' : 'hidden';
+  });
+</script>

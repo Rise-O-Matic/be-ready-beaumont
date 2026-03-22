@@ -1,0 +1,139 @@
+---
+import Base from '../layouts/Base.astro';
+
+const partners = [
+  "Beaumont Home Center", "Chamberlain Family Orthodontics", "City of Beaumont",
+  "Corner Stone BBQ", "ENOVA Create", "Habitat for Humanity of the San Gorgonio Pass",
+  "Highland Springs Ranch & Inn", "LifeStream Blood Bank", "Little Smiles Inc.",
+  "Marketplace Physical Therapy", "Movement For Life", "One Legacy Foundation",
+  "Dr. Ong", "Pass Physical Therapy", "Props AV", "Rancho Paseo Medical Group",
+  "RCMC Medical Center", "RISCO Inc.", "Sorenson Engineering",
+  "Stanley H. Schwartz MD, Inc.", "Starting Line Strength & Stability Center",
+  "Riverside University Health System", "Wildwood Canyon Villa",
+  "Xenia Racing Wraps", "123 Farm", "Dots On The Go", "Faith In Action",
+];
+---
+
+<Base title="For Partners" description="Partner with Be Ready Beaumont to shape the next generation of your workforce.">
+  <section class="bg-brand-navy text-white py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl md:text-5xl font-black">Partner With Us</h1>
+      <p class="mt-4 text-lg text-white/70 max-w-2xl">
+        Open your doors to the next generation. Our students are motivated, trained,
+        and ready to learn — and your business gets early access to future talent.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-3xl font-black text-brand-navy">Why Partner?</h2>
+          <p class="mt-4 text-brand-slate/80 leading-relaxed">
+            Work-based learning partnerships give your business early access to trained, motivated
+            students who are already learning your industry. It's workforce development that starts
+            before the job posting.
+          </p>
+
+          <div class="mt-8 space-y-6">
+            {[
+              {
+                title: "Build Your Pipeline",
+                desc: "Students who train in your workplace know your culture, your standards, and your tools. When they graduate, they're ready to hire — no ramp-up needed.",
+              },
+              {
+                title: "Low Commitment, High Impact",
+                desc: "Partnerships are structured and supported by our Career Readiness Coordinator. We handle the logistics — you provide the mentorship.",
+              },
+              {
+                title: "Give Back Meaningfully",
+                desc: "This isn't a donation box. You're directly shaping young careers in your community. Students remember who opened the door for them.",
+              },
+              {
+                title: "Tax Benefits",
+                desc: "Work-based learning partnerships may qualify for state and federal tax incentives for workforce development.",
+              },
+            ].map((item) => (
+              <div class="flex gap-4">
+                <div class="w-2 h-2 bg-brand-gold rounded-full mt-2 shrink-0"></div>
+                <div>
+                  <h3 class="font-bold text-brand-navy">{item.title}</h3>
+                  <p class="text-sm text-brand-slate/70 mt-1">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="bg-brand-light rounded-2xl p-8">
+          <h3 class="text-xl font-bold text-brand-navy mb-2">Interested?</h3>
+          <p class="text-sm text-brand-slate/70 mb-6">
+            Fill out this form and our Career Readiness Coordinator will be in touch within 48 hours.
+          </p>
+          <form class="space-y-4" name="partner-inquiry" method="POST" data-netlify="true">
+            <div>
+              <label for="name" class="block text-sm font-medium text-brand-navy mb-1">Your Name</label>
+              <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue" />
+            </div>
+            <div>
+              <label for="org" class="block text-sm font-medium text-brand-navy mb-1">Organization</label>
+              <input type="text" id="org" name="organization" required class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue" />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-brand-navy mb-1">Email</label>
+              <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue" />
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-medium text-brand-navy mb-1">Phone (optional)</label>
+              <input type="tel" id="phone" name="phone" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue" />
+            </div>
+            <div>
+              <label for="industry" class="block text-sm font-medium text-brand-navy mb-1">Industry / Sector</label>
+              <select id="industry" name="industry" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue bg-white">
+                <option value="">Select one...</option>
+                <option>Healthcare / Medical</option>
+                <option>Construction / Trades</option>
+                <option>Manufacturing / Engineering</option>
+                <option>Media / Entertainment</option>
+                <option>Food Service / Hospitality</option>
+                <option>Public Safety / Law</option>
+                <option>Education</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-brand-navy mb-1">Tell us about your interest</label>
+              <textarea id="message" name="message" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue"></textarea>
+            </div>
+            <button type="submit" class="w-full px-4 py-2.5 text-sm font-bold bg-brand-gold text-brand-navy rounded-lg hover:bg-amber-400 transition-colors">
+              Submit Inquiry
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Current Partners -->
+  <section class="py-16 md:py-24 bg-brand-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-black text-brand-navy mb-3">Current Partners</h2>
+      <p class="text-brand-slate/70 mb-8">30+ organizations providing work-based learning opportunities for our students.</p>
+      <div class="flex flex-wrap gap-3">
+        {partners.map((p) => (
+          <span class="bg-white px-4 py-2 rounded-full text-sm text-brand-slate/70 border border-gray-200">{p}</span>
+        ))}
+      </div>
+
+      <div class="mt-12 bg-brand-navy rounded-2xl p-8 text-white text-center">
+        <p class="text-lg font-bold">Contact our Career Readiness Coordinator</p>
+        <p class="text-white/70 mt-2">Susan Aguilar-Martinez</p>
+        <a href="mailto:saguilarMartinez@beaumontusd.k12.ca.us" class="text-brand-gold hover:underline text-sm mt-1 inline-block">
+          saguilarMartinez@beaumontusd.k12.ca.us
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>

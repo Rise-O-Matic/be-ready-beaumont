@@ -1,0 +1,82 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-brand-dark text-white/40 grain relative overflow-hidden">
+  <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-copper/20 to-transparent"></div>
+  <div class="relative z-10 max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+      <!-- Brand -->
+      <div class="md:col-span-5">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-10 h-10 bg-brand-copper rounded-lg flex items-center justify-center font-[Syne] font-extrabold text-white text-lg rotate-[-2deg]">B</div>
+          <div>
+            <div class="font-[Syne] font-bold text-white text-[15px]">Be Ready Beaumont</div>
+            <div class="text-[11px] uppercase tracking-[0.2em] text-white/25">CTE Pathways</div>
+          </div>
+        </div>
+        <p class="text-sm leading-relaxed max-w-sm">
+          Beaumont USD's K-12 Career Technical Education program — connecting students
+          to real careers through 12 pathways across 7 industry sectors.
+        </p>
+        <p class="text-[11px] uppercase tracking-[0.15em] text-brand-copper/60 mt-4">
+          CSBA Golden Bell Award Winner 2024
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div class="md:col-span-3">
+        <h3 class="font-[Syne] font-bold text-white text-sm mb-4">Explore</h3>
+        <ul class="space-y-2.5 text-sm">
+          {[
+            { label: "Pathways", href: "/pathways" },
+            { label: "For Students", href: "/students" },
+            { label: "For Parents", href: "/parents" },
+            { label: "For Partners", href: "/partners" },
+            { label: "Results", href: "/results" },
+            { label: "About", href: "/about" },
+          ].map((link) => (
+            <li>
+              <a href={link.href} class="hover:text-brand-copper transition-colors duration-200">{link.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="md:col-span-4">
+        <h3 class="font-[Syne] font-bold text-white text-sm mb-4">Contact</h3>
+        <div class="space-y-3 text-sm">
+          <div>
+            <p class="text-white/60">Dr. Michael Breyer</p>
+            <p class="text-[12px] text-white/30">Director, College & Career Readiness</p>
+            <a href="mailto:mbreyer@beaumontusd.k12.ca.us" class="text-brand-copper hover:text-brand-copper/80 transition-colors text-[13px]">
+              mbreyer@beaumontusd.k12.ca.us
+            </a>
+          </div>
+          <div>
+            <p class="text-white/60">Susan Aguilar-Martinez</p>
+            <p class="text-[12px] text-white/30">Career Readiness Coordinator</p>
+            <a href="mailto:saguilarMartinez@beaumontusd.k12.ca.us" class="text-brand-copper hover:text-brand-copper/80 transition-colors text-[13px]">
+              saguilarMartinez@beaumontusd.k12.ca.us
+            </a>
+          </div>
+        </div>
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 mt-5 px-5 py-2 text-[13px] font-semibold uppercase tracking-wider bg-brand-copper text-white rounded-lg hover:bg-brand-copper/90 transition-colors"
+        >
+          Get in Touch
+        </a>
+      </div>
+    </div>
+
+    <div class="border-t border-white/5 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-[12px] text-white/20">
+      <p>&copy; {currentYear} Beaumont Unified School District</p>
+      <p>
+        A program of{' '}
+        <a href="https://www.beaumontusd.k12.ca.us" class="hover:text-white/40 transition-colors" target="_blank" rel="noopener">Beaumont USD</a>
+      </p>
+    </div>
+  </div>
+</footer>

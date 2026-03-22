@@ -1,0 +1,121 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="About" description="The story behind Be Ready Beaumont and our K-12 approach to career readiness.">
+  <section class="bg-brand-navy text-white py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl md:text-5xl font-black">About Be Ready Beaumont</h1>
+      <p class="mt-4 text-lg text-white/70 max-w-2xl">
+        A K-12 Career Technical Education program that starts with self-discovery
+        and ends with students who know who they are and where they're going.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-8 text-brand-slate/80 leading-relaxed">
+        <p class="text-lg">
+          Be Ready Beaumont began in 2017 with a simple belief: when students connect who they are
+          to a career that capitalizes on their strengths, interests, and values, they don't just
+          find a job — they find purpose.
+        </p>
+
+        <p>
+          Beaumont Unified School District knows there's no one-size-fits-all path. College is a
+          great opportunity for many, but it doesn't always provide every student with the skills
+          to pursue a career they're passionate about. The economy has shifted from degrees to skills —
+          critical thinking, collaboration, innovation, continuous learning. Be Ready Beaumont was
+          built for this reality.
+        </p>
+
+        <h2 class="text-2xl font-black text-brand-navy pt-4">It Starts Early</h2>
+
+        <p>
+          In elementary school, students explore who they are and what interests them through the
+          <strong>Pathful</strong> platform — age-appropriate assessments and activities that promote
+          self-discovery and career awareness. In upper elementary, <strong>Holland's RIASEC
+          occupational themes</strong> are introduced, helping students understand how their
+          strengths, interests, and values connect to real careers.
+        </p>
+
+        <p>
+          By middle school, students enter dedicated CTE courses — Robotics, Product Innovation
+          and Design, Digital Media, Performing Arts — with medical programs expanding to every
+          middle school site.
+        </p>
+
+        <h2 class="text-2xl font-black text-brand-navy pt-4">12 Pathways, 7 Sectors</h2>
+
+        <p>
+          At the high school level, students choose from 12 CTE pathways across six industry sectors
+          at Beaumont and Glen View High Schools. Every pathway is taught by an instructor with
+          real industry experience. Every pathway connects to post-secondary opportunities through
+          dual enrollment and articulated courses with Mt. San Jacinto College.
+        </p>
+
+        <h2 class="text-2xl font-black text-brand-navy pt-4">Institutional Commitment</h2>
+
+        <p>
+          The Beaumont USD Board of Trustees didn't just approve CTE — they invested in it. Before
+          the 2021-22 school year, the Board adopted a CTE teacher salary schedule that recognizes
+          industry experience (without requiring a bachelor's degree) and absorbed all CTE teaching
+          positions into the general fund. That's not a pilot program — that's a permanent commitment.
+        </p>
+
+        <div class="bg-brand-light rounded-2xl p-8 my-8">
+          <blockquote class="text-lg italic text-brand-slate/90">
+            "Be Ready Beaumont is about supporting students in who they are as unique and amazing
+            individuals, fueling their passion, and maximizing their opportunities for success.
+            By focusing on skill development, personal reflection and growth, and expanding
+            students' perspectives on post-secondary opportunities throughout their educational
+            journey, we can help students find relevance in their learning and choose a career
+            that gives them purpose."
+          </blockquote>
+          <cite class="block mt-4 font-bold text-brand-navy not-italic">Dr. Michael Breyer</cite>
+          <span class="text-sm text-brand-slate/50">Director, College & Career Readiness</span>
+        </div>
+      </div>
+
+      <!-- Staff -->
+      <div class="mt-16">
+        <h2 class="text-2xl font-black text-brand-navy mb-8">Leadership</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {[
+            {
+              name: "Dr. Michael Breyer",
+              title: "Director, College & Career Readiness",
+              email: "mbreyer@beaumontusd.k12.ca.us",
+            },
+            {
+              name: "Alicia Chamberlain",
+              title: "TOSA, College & Career Readiness",
+              email: "achamberlain@beaumontusd.k12.ca.us",
+            },
+            {
+              name: "Eve Chester",
+              title: "College & Career Readiness TOSA",
+              email: "",
+            },
+            {
+              name: "Susan Aguilar-Martinez",
+              title: "Career Readiness Coordinator",
+              email: "saguilarMartinez@beaumontusd.k12.ca.us",
+            },
+          ].map((person) => (
+            <div class="bg-brand-light rounded-xl p-6">
+              <p class="font-bold text-brand-navy">{person.name}</p>
+              <p class="text-sm text-brand-slate/60">{person.title}</p>
+              {person.email && (
+                <a href={`mailto:${person.email}`} class="text-sm text-brand-blue hover:underline mt-1 inline-block">
+                  {person.email}
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,168 @@
+---
+import Base from '../../layouts/Base.astro';
+import { pathways } from '../../content/pathways';
+import type { Pathway } from '../../content/pathways';
+
+export function getStaticPaths() {
+  return pathways.map((p) => ({
+    params: { slug: p.slug },
+    props: { pathway: p },
+  }));
+}
+
+interface Props {
+  pathway: Pathway;
+}
+
+const { pathway } = Astro.props;
+---
+
+<Base title={pathway.name} description={pathway.description}>
+  <!-- Hero -->
+  <section class="relative bg-brand-navy text-white">
+    <div class="absolute inset-0">
+      <img src={pathway.photo} alt={pathway.name} class="w-full h-full object-cover opacity-20" />
+      <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-brand-navy/70"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <a href="/pathways" class="inline-flex items-center gap-1 text-sm text-white/60 hover:text-white mb-4 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        All Pathways
+      </a>
+      <p class="text-sm font-semibold text-brand-gold uppercase tracking-wide">{pathway.sector}</p>
+      <h1 class="text-3xl md:text-5xl font-black mt-2">{pathway.name}</h1>
+      <p class="mt-4 text-lg text-white/80 max-w-2xl">{pathway.description}</p>
+      <p class="mt-3 text-sm text-white/50">{pathway.school}</p>
+    </div>
+  </section>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <!-- Main Content -->
+      <div class="lg:col-span-2 space-y-12">
+        <!-- Curriculum -->
+        {pathway.curriculum.length > 0 && (
+          <div>
+            <h2 class="text-2xl font-black text-brand-navy mb-6">What You'll Learn</h2>
+            <div class="space-y-4">
+              {pathway.curriculum.map((year) => (
+                <div class="bg-brand-light rounded-xl p-6">
+                  <div class="flex items-center gap-3 mb-3">
+                    <span class="bg-brand-blue text-white text-xs font-bold px-2.5 py-1 rounded-full">{year.year}</span>
+                    <h3 class="font-bold text-brand-navy">{year.title}</h3>
+                    {year.articulated && (
+                      <span class="bg-brand-gold/20 text-brand-gold text-xs font-semibold px-2 py-0.5 rounded-full">MSJC Articulated</span>
+                    )}
+                    {year.dualEnrollment && (
+                      <span class="bg-brand-blue/10 text-brand-blue text-xs font-semibold px-2 py-0.5 rounded-full">Dual Enrollment</span>
+                    )}
+                  </div>
+                  <ul class="space-y-1.5">
+                    {year.topics.map((topic) => (
+                      <li class="flex items-start gap-2 text-sm text-brand-slate/80">
+                        <svg class="w-4 h-4 text-brand-blue mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        {topic}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- Photo -->
+        <div>
+          <img
+            src={pathway.photo}
+            alt={`${pathway.name} students in action`}
+            class="rounded-xl w-full shadow-lg"
+          />
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-8">
+        <!-- Instructor -->
+        {pathway.instructor.name !== "TBD" && (
+          <div class="bg-brand-light rounded-xl p-6">
+            <h3 class="text-sm font-semibold text-brand-blue uppercase tracking-wide mb-4">Your Instructor</h3>
+            {pathway.instructor.headshot && (
+              <img
+                src={pathway.instructor.headshot}
+                alt={pathway.instructor.name}
+                class="w-24 h-24 rounded-xl object-cover mb-4"
+              />
+            )}
+            <p class="font-bold text-brand-navy text-lg">{pathway.instructor.name}</p>
+
+            {pathway.instructor.industry.length > 0 && (
+              <div class="mt-4">
+                <p class="text-xs font-semibold text-brand-slate/50 uppercase tracking-wide mb-2">Industry Experience</p>
+                <ul class="space-y-1.5">
+                  {pathway.instructor.industry.map((item) => (
+                    <li class="text-sm text-brand-slate/70">{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {pathway.instructor.teaching.length > 0 && (
+              <div class="mt-4">
+                <p class="text-xs font-semibold text-brand-slate/50 uppercase tracking-wide mb-2">Teaching</p>
+                <ul class="space-y-1.5">
+                  {pathway.instructor.teaching.map((item) => (
+                    <li class="text-sm text-brand-slate/70">{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
+
+        <!-- Quick Facts -->
+        <div class="bg-brand-navy rounded-xl p-6 text-white">
+          <h3 class="text-sm font-semibold text-brand-gold uppercase tracking-wide mb-4">Quick Facts</h3>
+          <dl class="space-y-3 text-sm">
+            <div>
+              <dt class="text-white/50">School</dt>
+              <dd class="font-medium">{pathway.school}</dd>
+            </div>
+            <div>
+              <dt class="text-white/50">Industry Sector</dt>
+              <dd class="font-medium">{pathway.sector}</dd>
+            </div>
+            {pathway.curriculum.some(c => c.articulated) && (
+              <div>
+                <dt class="text-white/50">College Credit</dt>
+                <dd class="font-medium">Articulated with MSJC</dd>
+              </div>
+            )}
+            {pathway.curriculum.some(c => c.dualEnrollment) && (
+              <div>
+                <dt class="text-white/50">Dual Enrollment</dt>
+                <dd class="font-medium">Earn college credit in high school</dd>
+              </div>
+            )}
+          </dl>
+        </div>
+
+        <!-- CTA -->
+        <div class="bg-brand-gold/10 rounded-xl p-6 border border-brand-gold/20">
+          <h3 class="font-bold text-brand-navy">Interested?</h3>
+          <p class="text-sm text-brand-slate/70 mt-2">Talk to your school counselor about enrolling in this pathway, or contact us for more information.</p>
+          <a
+            href="/contact"
+            class="mt-4 inline-flex items-center justify-center w-full px-4 py-2.5 text-sm font-bold bg-brand-gold text-brand-navy rounded-lg hover:bg-amber-400 transition-colors"
+          >
+            Get in Touch
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Base>
