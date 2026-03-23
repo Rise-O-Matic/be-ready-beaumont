@@ -1,0 +1,327 @@
+---
+import Proposal from '../layouts/Proposal.astro';
+import { base } from '../utils/base';
+
+const colors = [
+  { name: 'Dark', var: '--color-brand-dark', hex: '#0c1420', usage: 'Page backgrounds, hero sections' },
+  { name: 'Navy', var: '--color-brand-navy', hex: '#141f33', usage: 'Primary text on light, section backgrounds' },
+  { name: 'Steel', var: '--color-brand-steel', hex: '#1e2d45', usage: 'Card backgrounds on dark, subtle containers' },
+  { name: 'Slate', var: '--color-brand-slate', hex: '#3a4a5c', usage: 'Body text, secondary headings' },
+  { name: 'Muted', var: '--color-brand-muted', hex: '#7a8a9e', usage: 'Tertiary text, captions' },
+  { name: 'Light', var: '--color-brand-light', hex: '#f0ede8', usage: 'Card backgrounds on cream, subtle fills' },
+  { name: 'Cream', var: '--color-brand-cream', hex: '#faf8f4', usage: 'Page background (light sections)' },
+  { name: 'Copper', var: '--color-brand-copper', hex: '#d4753e', usage: 'Primary accent — CTAs, links, highlights' },
+  { name: 'Amber', var: '--color-brand-amber', hex: '#e8a84c', usage: 'Secondary warm accent, award badges' },
+  { name: 'Teal', var: '--color-brand-teal', hex: '#2dd4a8', usage: 'Tertiary accent — partners, success states' },
+];
+---
+
+<Proposal title="Style Guide" current="style-guide">
+  <!-- Hero -->
+  <section class="relative bg-brand-dark text-white py-20 md:py-28 overflow-hidden grain">
+    <div class="absolute top-1/3 left-1/4 w-96 h-96 bg-brand-copper/5 rounded-full blur-[120px]"></div>
+    <div class="relative max-w-[900px] mx-auto px-5 sm:px-8">
+      <p class="reveal text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-copper mb-4">Step 3 of 5</p>
+      <h1 class="reveal font-[Schibsted_Grotesk] text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.05]" style="animation-delay: 100ms">
+        The visual<br />
+        <span class="text-brand-copper">language.</span>
+      </h1>
+      <p class="reveal text-lg md:text-xl text-white/50 mt-6 max-w-xl leading-relaxed" style="animation-delay: 200ms">
+        Not a school district site. Not a corporate template. A design system that says
+        "career launchpad" — grounded, warm, and professional.
+      </p>
+    </div>
+  </section>
+
+  <!-- Typography -->
+  <section class="py-16 md:py-24 bg-brand-cream">
+    <div class="max-w-[900px] mx-auto px-5 sm:px-8">
+      <div class="on-scroll">
+        <p class="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-copper mb-3">Typography</p>
+        <h2 class="font-[Schibsted_Grotesk] text-2xl md:text-4xl font-extrabold text-brand-navy tracking-tight">
+          Two fonts. Clear hierarchy.
+        </h2>
+      </div>
+
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Display font -->
+        <div class="on-scroll bg-white rounded-2xl p-8 border border-gray-200/60">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="text-[11px] font-bold uppercase tracking-[0.15em] text-brand-copper bg-brand-copper/10 px-2.5 py-1 rounded-full">Display</span>
+          </div>
+          <p class="font-[Schibsted_Grotesk] text-5xl font-extrabold text-brand-navy leading-none tracking-tight">
+            Schibsted Grotesk
+          </p>
+          <p class="text-sm text-brand-slate/50 mt-4 leading-relaxed">
+            Headlines, stats, navigation. Sharp, editorial, confident — reads strong at large sizes
+            without being theatrical.
+          </p>
+          <div class="mt-6 space-y-2 border-t border-gray-100 pt-6">
+            <p class="font-[Schibsted_Grotesk] text-3xl font-extrabold text-brand-navy">Real Careers. — 800</p>
+            <p class="font-[Schibsted_Grotesk] text-2xl font-bold text-brand-navy">Building & Construction — 700</p>
+            <p class="font-[Schibsted_Grotesk] text-lg font-semibold text-brand-slate">Section Headings — 600</p>
+            <p class="font-[Schibsted_Grotesk] text-base font-medium text-brand-slate/70">Navigation Labels — 500</p>
+          </div>
+        </div>
+
+        <!-- Body font -->
+        <div class="on-scroll bg-white rounded-2xl p-8 border border-gray-200/60">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="text-[11px] font-bold uppercase tracking-[0.15em] text-brand-slate/40 bg-gray-100 px-2.5 py-1 rounded-full">Body</span>
+          </div>
+          <p class="font-[Outfit] text-5xl font-bold text-brand-navy leading-none">
+            Outfit
+          </p>
+          <p class="text-sm text-brand-slate/50 mt-4 leading-relaxed">
+            Body copy, descriptions, form labels. Geometric, friendly, excellent readability
+            at small sizes. Pairs cleanly with Schibsted's editorial sharpness.
+          </p>
+          <div class="mt-6 space-y-2 border-t border-gray-100 pt-6">
+            <p class="font-[Outfit] text-base font-normal text-brand-slate leading-relaxed">
+              Be Ready Beaumont is Beaumont USD's K-12 Career Technical Education program,
+              connecting students to real careers through 12 pathways across 7 industry sectors. — Regular 400
+            </p>
+            <p class="font-[Outfit] text-sm font-light text-brand-slate/60 leading-relaxed">
+              Captions, metadata, and tertiary text use the light weight. — Light 300
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Type scale -->
+      <div class="on-scroll mt-8 bg-white rounded-2xl p-8 border border-gray-200/60">
+        <p class="text-[11px] font-bold uppercase tracking-[0.15em] text-brand-slate/40 mb-6">Scale in action</p>
+        <div class="space-y-4">
+          <div class="flex items-baseline gap-4 border-b border-gray-50 pb-3">
+            <span class="text-[11px] text-brand-slate/30 w-20 shrink-0 font-mono">5xl / 48</span>
+            <p class="font-[Schibsted_Grotesk] text-5xl font-extrabold text-brand-navy tracking-tight leading-none">Real Careers.</p>
+          </div>
+          <div class="flex items-baseline gap-4 border-b border-gray-50 pb-3">
+            <span class="text-[11px] text-brand-slate/30 w-20 shrink-0 font-mono">3xl / 30</span>
+            <p class="font-[Schibsted_Grotesk] text-3xl font-extrabold text-brand-navy tracking-tight">Built for the Real World</p>
+          </div>
+          <div class="flex items-baseline gap-4 border-b border-gray-50 pb-3">
+            <span class="text-[11px] text-brand-slate/30 w-20 shrink-0 font-mono">xl / 20</span>
+            <p class="font-[Schibsted_Grotesk] text-xl font-bold text-brand-navy">I'm a Student</p>
+          </div>
+          <div class="flex items-baseline gap-4 border-b border-gray-50 pb-3">
+            <span class="text-[11px] text-brand-slate/30 w-20 shrink-0 font-mono">base / 16</span>
+            <p class="font-[Outfit] text-base text-brand-slate">Students building real skills for real careers — starting now.</p>
+          </div>
+          <div class="flex items-baseline gap-4">
+            <span class="text-[11px] text-brand-slate/30 w-20 shrink-0 font-mono">xs / 12</span>
+            <p class="text-xs uppercase tracking-[0.15em] font-semibold text-brand-copper">12 Career Pathways</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Color -->
+  <section class="py-16 md:py-24 bg-brand-dark text-white grain relative overflow-hidden">
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-brand-copper/5 rounded-full blur-[120px]"></div>
+    <div class="relative max-w-[900px] mx-auto px-5 sm:px-8">
+      <div class="on-scroll">
+        <p class="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-copper mb-3">Color</p>
+        <h2 class="font-[Schibsted_Grotesk] text-2xl md:text-4xl font-extrabold text-white tracking-tight">
+          Workshop tones. Warm copper accent.
+        </h2>
+        <p class="text-white/40 mt-3 max-w-xl leading-relaxed">
+          Dark foundation with a warm, industrial palette. The copper carries every CTA, link,
+          and highlight — it's the one color that says "act."
+        </p>
+      </div>
+
+      <div class="mt-12 grid grid-cols-2 sm:grid-cols-5 gap-3">
+        {colors.map((color) => (
+          <div class="on-scroll group">
+            <div
+              class="aspect-square rounded-xl border border-white/10 mb-2 group-hover:scale-105 transition-transform duration-300"
+              style={`background-color: ${color.hex}`}
+            ></div>
+            <p class="text-[12px] font-semibold text-white/70">{color.name}</p>
+            <p class="text-[11px] text-white/25 font-mono">{color.hex}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- Usage -->
+      <div class="on-scroll mt-12 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-brand-steel/50 rounded-xl p-6 border border-white/5">
+          <p class="text-[11px] font-bold uppercase tracking-[0.15em] text-brand-copper mb-3">Dark mode (hero, nav, footer)</p>
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-lg bg-brand-dark border border-white/10"></div>
+            <div>
+              <p class="text-white text-sm font-semibold">White text on dark</p>
+              <p class="text-white/30 text-[12px]">Copper for links and accents</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-brand-cream rounded-xl p-6 border border-gray-200/60">
+          <p class="text-[11px] font-bold uppercase tracking-[0.15em] text-brand-copper mb-3">Light mode (content sections)</p>
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-lg bg-white border border-gray-200"></div>
+            <div>
+              <p class="text-brand-navy text-sm font-semibold">Navy text on cream</p>
+              <p class="text-brand-slate/50 text-[12px]">White cards, subtle borders</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Components -->
+  <section class="py-16 md:py-24 bg-brand-cream">
+    <div class="max-w-[900px] mx-auto px-5 sm:px-8">
+      <div class="on-scroll">
+        <p class="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-copper mb-3">Components</p>
+        <h2 class="font-[Schibsted_Grotesk] text-2xl md:text-4xl font-extrabold text-brand-navy tracking-tight">
+          Buttons, cards, patterns.
+        </h2>
+      </div>
+
+      <!-- Buttons -->
+      <div class="on-scroll mt-12 bg-white rounded-2xl p-8 border border-gray-200/60">
+        <p class="text-[11px] font-bold uppercase tracking-[0.15em] text-brand-slate/40 mb-6">Buttons</p>
+        <div class="flex flex-wrap gap-4 items-center">
+          <a class="inline-flex items-center gap-2 px-7 py-3.5 text-sm font-semibold uppercase tracking-wider bg-brand-copper text-white rounded-lg hover:bg-brand-copper/90 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-xl hover:shadow-brand-copper/25 cursor-pointer">
+            Primary CTA
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <a class="inline-flex items-center gap-2 px-7 py-3.5 text-sm font-semibold uppercase tracking-wider bg-brand-navy text-white rounded-lg hover:bg-brand-steel transition-all duration-300 cursor-pointer">
+            Secondary
+          </a>
+          <a class="inline-flex items-center gap-2 px-7 py-3.5 text-sm font-semibold uppercase tracking-wider border border-brand-slate/20 text-brand-slate rounded-lg hover:border-brand-copper/40 hover:text-brand-copper transition-all duration-300 cursor-pointer">
+            Outline
+          </a>
+        </div>
+        <p class="text-[12px] text-brand-slate/40 mt-4">Uppercase tracking, arrow on primary CTAs. Lift on hover with colored shadow.</p>
+      </div>
+
+      <!-- Card patterns -->
+      <div class="on-scroll mt-6 bg-white rounded-2xl p-8 border border-gray-200/60">
+        <p class="text-[11px] font-bold uppercase tracking-[0.15em] text-brand-slate/40 mb-6">Card patterns</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Light card -->
+          <div class="bg-brand-light rounded-xl p-6 border border-gray-200/40">
+            <p class="font-[Schibsted_Grotesk] font-bold text-brand-navy">Light card</p>
+            <p class="text-sm text-brand-slate/60 mt-1">On cream backgrounds. brand-light fill, subtle border.</p>
+          </div>
+          <!-- White card -->
+          <div class="bg-white rounded-xl p-6 border border-gray-200/60 shadow-sm">
+            <p class="font-[Schibsted_Grotesk] font-bold text-brand-navy">White card</p>
+            <p class="text-sm text-brand-slate/60 mt-1">On cream backgrounds. White fill, border, soft shadow.</p>
+          </div>
+        </div>
+        <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Dark card -->
+          <div class="bg-brand-steel/50 rounded-xl p-6 border border-white/5">
+            <p class="font-[Schibsted_Grotesk] font-bold text-white">Dark card</p>
+            <p class="text-sm text-white/40 mt-1">On dark backgrounds. Steel fill, hairline border.</p>
+          </div>
+          <!-- Accent card -->
+          <div class="bg-brand-copper/10 rounded-xl p-6 border border-brand-copper/20">
+            <p class="font-[Schibsted_Grotesk] font-bold text-brand-navy">Accent card</p>
+            <p class="text-sm text-brand-slate/60 mt-1">Callouts and CTAs. Copper tint, copper border.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Textures & effects -->
+      <div class="on-scroll mt-6 bg-white rounded-2xl p-8 border border-gray-200/60">
+        <p class="text-[11px] font-bold uppercase tracking-[0.15em] text-brand-slate/40 mb-6">Textures & effects</p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="relative bg-brand-dark rounded-xl p-6 overflow-hidden grain h-32 flex items-end">
+            <p class="relative z-10 text-[12px] text-white/50 font-medium">Grain overlay</p>
+          </div>
+          <div class="bg-brand-dark rounded-xl p-6 h-32 flex items-end relative overflow-hidden">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-brand-copper/10 rounded-full blur-[40px]"></div>
+            <p class="relative z-10 text-[12px] text-white/50 font-medium">Gradient blur orbs</p>
+          </div>
+          <div class="bg-brand-dark rounded-xl p-6 h-32 flex items-end">
+            <span class="text-brand-copper font-[Schibsted_Grotesk] font-bold">
+              This is a <span class="marker">highlighted phrase</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section labels -->
+      <div class="on-scroll mt-6 bg-white rounded-2xl p-8 border border-gray-200/60">
+        <p class="text-[11px] font-bold uppercase tracking-[0.15em] text-brand-slate/40 mb-6">Section label pattern</p>
+        <div class="space-y-6">
+          <div>
+            <p class="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-copper mb-2">12 Career Pathways</p>
+            <p class="font-[Schibsted_Grotesk] text-3xl font-extrabold text-brand-navy tracking-tight">Built for the Real World</p>
+            <p class="text-brand-slate/60 mt-2">Every section follows the same rhythm: small copper label, large bold heading, optional body text.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photography -->
+  <section class="py-16 md:py-24 bg-brand-dark text-white grain relative overflow-hidden">
+    <div class="max-w-[900px] mx-auto px-5 sm:px-8">
+      <div class="on-scroll">
+        <p class="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-copper mb-3">Photography</p>
+        <h2 class="font-[Schibsted_Grotesk] text-2xl md:text-4xl font-extrabold text-white tracking-tight">
+          Real students. Real work. No stock.
+        </h2>
+        <p class="text-white/40 mt-3 max-w-xl">
+          All photos are from Beaumont USD's actual CTE programs. The duotone treatment
+          desaturates slightly and adds contrast — full color returns on hover.
+        </p>
+      </div>
+
+      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-3">
+        {[
+          "images/photos/construction-framing-hard-hats.jpg",
+          "images/photos/culinary-food-truck-exterior.jpg",
+          "images/photos/manufacturing-student-angle-grinder.jpg",
+          "images/photos/broadcast-studio-wide-shot.jpg",
+          "images/photos/game-design-students-computer-lab.jpg",
+          "images/photos/sports-medicine-ankle-taping.jpg",
+          "images/photos/technical-theater-spotlight-operator.jpg",
+          "images/photos/performing-arts-western-scene.jpg",
+        ].map((src) => (
+          <div class="on-scroll aspect-square rounded-xl overflow-hidden">
+            <img
+              src={base(src)}
+              alt=""
+              class="w-full h-full object-cover img-duotone hover:filter-none transition-all duration-500"
+              loading="lazy"
+            />
+          </div>
+        ))}
+      </div>
+
+      <div class="on-scroll mt-8 bg-brand-steel/50 rounded-xl p-6 border border-white/5">
+        <p class="text-[13px] font-semibold text-white/50">
+          <span class="text-brand-copper font-bold">76 total assets</span> extracted and cataloged —
+          13 logos, 15 staff headshots, 32 pathway photos, 9 graphics, 5 backgrounds.
+          Naming convention: lowercase-with-dashes, organized by type.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-20 bg-brand-cream">
+    <div class="max-w-[900px] mx-auto px-5 sm:px-8 text-center on-scroll">
+      <p class="text-brand-slate/40 text-sm mb-3">Now see it all come together.</p>
+      <a
+        href={base("prototype")}
+        class="group inline-flex items-center gap-3 px-8 py-4 text-sm font-semibold uppercase tracking-wider bg-brand-copper text-white rounded-lg hover:bg-brand-copper/90 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-xl hover:shadow-brand-copper/25"
+      >
+        See the Prototype
+        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </section>
+</Proposal>
