@@ -16,11 +16,9 @@ const navItems = [
       <!-- Logo -->
       <a href={base("")} class="flex items-center group relative z-10">
         <!-- Monogram: mobile only -->
-        <div class="sm:hidden w-7 h-7 bg-brand-copper rounded-[5px] flex items-center justify-center font-[Outfit] font-semibold text-white text-[18px] leading-none rotate-[-2deg] group-hover:rotate-0 transition-transform duration-300">B</div>
+        <img src={base("images/logos/brb-icon.svg")} alt="Be Ready Beaumont" class="sm:hidden h-7" />
         <!-- Wordmark: desktop -->
-        <div class="hidden sm:block">
-          <span class="font-[Outfit] font-semibold text-[15px] leading-tight tracking-[-0.025em] text-white">Be Ready Beaumont</span>
-        </div>
+        <img src={base("images/logos/brb-mark-dark.svg")} alt="Be Ready Beaumont" class="hidden sm:block h-6" />
       </a>
 
       <!-- Desktop Nav -->
