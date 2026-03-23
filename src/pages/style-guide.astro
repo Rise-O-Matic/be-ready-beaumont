@@ -57,9 +57,9 @@ const colors = [
         <p class="text-[11px] font-bold uppercase tracking-[0.15em] text-white/20 mb-8">On dark backgrounds</p>
         <div class="flex items-center gap-3">
           <div class="relative shrink-0">
-            <div class="w-9 h-9 bg-brand-copper rounded-[6px] flex items-center justify-center font-[Outfit] font-semibold text-white text-[26px] leading-none rotate-[-2deg]">B</div>
+            <div class="w-9 h-9 bg-brand-copper rounded-[6px] flex items-center justify-center font-[Outfit] font-semibold text-white text-[22px] leading-none rotate-[-2deg]">B<span class="text-[14px] rotate-[12deg] inline-block ml-[-1px] mt-[-3px]">!</span></div>
           </div>
-          <div class="font-[Outfit] font-semibold text-[24px] leading-tight tracking-[-0.025em] text-white">Be Ready Beaumont</div>
+          <div class="font-[Outfit] font-semibold text-[24px] leading-tight tracking-[-0.025em] text-white">Be Ready Beaumont<span class="text-brand-copper font-bold text-[28px] inline-block rotate-[12deg] ml-[-2px] mt-[-4px]">!</span></div>
         </div>
       </div>
 
@@ -68,9 +68,9 @@ const colors = [
         <p class="text-[11px] font-bold uppercase tracking-[0.15em] text-brand-slate/30 mb-8">On light backgrounds</p>
         <div class="flex items-center gap-3">
           <div class="relative shrink-0">
-            <div class="w-9 h-9 bg-brand-copper rounded-[6px] flex items-center justify-center font-[Outfit] font-semibold text-white text-[26px] leading-none rotate-[-2deg]">B</div>
+            <div class="w-9 h-9 bg-brand-copper rounded-[6px] flex items-center justify-center font-[Outfit] font-semibold text-white text-[22px] leading-none rotate-[-2deg]">B<span class="text-[14px] rotate-[12deg] inline-block ml-[-1px] mt-[-3px]">!</span></div>
           </div>
-          <div class="font-[Outfit] font-semibold text-[24px] leading-tight tracking-[-0.025em] text-brand-navy">Be Ready Beaumont</div>
+          <div class="font-[Outfit] font-semibold text-[24px] leading-tight tracking-[-0.025em] text-brand-navy">Be Ready Beaumont<span class="text-brand-copper font-bold text-[28px] inline-block rotate-[12deg] ml-[-2px] mt-[-4px]">!</span></div>
         </div>
       </div>
 
@@ -80,8 +80,8 @@ const colors = [
         <div class="bg-white rounded-2xl p-6 border border-gray-200/60 text-center">
           <p class="text-[11px] font-bold uppercase tracking-[0.15em] text-brand-slate/30 mb-4">Full mark</p>
           <div class="flex items-center gap-2 justify-center">
-            <div class="w-6 h-6 bg-brand-copper rounded-[5px] flex items-center justify-center font-[Outfit] font-semibold text-white text-[18px] leading-none rotate-[-2deg]">B</div>
-            <div class="font-[Outfit] font-semibold text-[15px] leading-tight tracking-[-0.025em] text-brand-navy text-left">Be Ready Beaumont</div>
+            <div class="w-6 h-6 bg-brand-copper rounded-[5px] flex items-center justify-center font-[Outfit] font-semibold text-white text-[16px] leading-none rotate-[-2deg]">B<span class="text-[10px] rotate-[12deg] inline-block ml-[-1px] mt-[-2px]">!</span></div>
+            <div class="font-[Outfit] font-semibold text-[15px] leading-tight tracking-[-0.025em] text-brand-navy text-left">Be Ready Beaumont<span class="text-brand-copper font-bold text-[17px] inline-block rotate-[12deg] ml-[-2px] mt-[-3px]">!</span></div>
           </div>
           <p class="text-[11px] text-brand-slate/40 mt-4">Navigation, headers, documents</p>
         </div>
@@ -90,7 +90,7 @@ const colors = [
         <div class="bg-white rounded-2xl p-6 border border-gray-200/60 text-center">
           <p class="text-[11px] font-bold uppercase tracking-[0.15em] text-brand-slate/30 mb-4">Monogram</p>
           <div class="flex justify-center">
-            <div class="w-12 h-12 bg-brand-copper rounded-[7px] flex items-center justify-center font-[Outfit] font-semibold text-white text-[34px] leading-none rotate-[-2deg]">B</div>
+            <div class="w-12 h-12 bg-brand-copper rounded-[7px] flex items-center justify-center font-[Outfit] font-semibold text-white text-[28px] leading-none rotate-[-2deg]">B<span class="text-[18px] rotate-[12deg] inline-block ml-[-1px] mt-[-4px]">!</span></div>
           </div>
           <p class="text-[11px] text-brand-slate/40 mt-4">Favicons, social avatars, small spaces</p>
         </div>
@@ -99,7 +99,7 @@ const colors = [
         <div class="bg-white rounded-2xl p-6 border border-gray-200/60 text-center">
           <p class="text-[11px] font-bold uppercase tracking-[0.15em] text-brand-slate/30 mb-4">Wordmark only</p>
           <div class="flex items-center justify-center h-16">
-            <div class="font-[Outfit] font-semibold text-[18px] tracking-[-0.025em] text-brand-navy">Be Ready Beaumont</div>
+            <div class="font-[Outfit] font-semibold text-[18px] tracking-[-0.025em] text-brand-navy">Be Ready Beaumont<span class="text-brand-copper font-bold text-[21px] inline-block rotate-[12deg] ml-[-2px] mt-[-3px]">!</span></div>
           </div>
           <p class="text-[11px] text-brand-slate/40 mt-4">Print materials, formal contexts</p>
         </div>
@@ -119,11 +119,15 @@ const colors = [
           </li>
           <li class="flex items-start gap-2">
             <span class="text-brand-copper mt-1 shrink-0">-</span>
-            <span>The <strong class="text-brand-navy">oversized B</strong> inside the monogram fills the square assertively — it reads at any size, from favicons to banners.</span>
+            <span>The <strong class="text-brand-navy">tilted exclamation point</strong> turns "B" into "B!" — a generic letter becomes an ownable mark. It says "pay attention" and "this matters," which is exactly what the program needs to communicate to students who don't know it exists. The 12-degree tilt echoes the monogram's rotation while adding energy.</span>
           </li>
           <li class="flex items-start gap-2">
             <span class="text-brand-copper mt-1 shrink-0">-</span>
-            <span>The <strong class="text-brand-navy">wordmark uses Outfit</strong> (the body font) instead of the display font — it's warm and approachable, letting the monogram carry the visual weight.</span>
+            <span>On the <strong class="text-brand-navy">wordmark, the ! is copper</strong> — the only color in the mark. It overlaps slightly, breaking the baseline, making the name feel active rather than static. "Be Ready Beaumont" is a statement. The punctuation makes it one.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand-copper mt-1 shrink-0">-</span>
+            <span>The <strong class="text-brand-navy">wordmark uses Outfit</strong> (the body font) instead of the display font — it's warm and approachable, letting the monogram and the ! carry the visual weight.</span>
           </li>
           <li class="flex items-start gap-2">
             <span class="text-brand-copper mt-1 shrink-0">-</span>

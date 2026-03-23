@@ -1,7 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 32" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 32" fill="none">
+  <!-- B! monogram -->
   <g transform="translate(2, 2)">
     <rect x="0" y="0" width="28" height="28" rx="5" fill="#d4753e" transform="rotate(-2, 14, 14)"/>
-    <text x="14" y="22" text-anchor="middle" font-family="'Outfit', sans-serif" font-weight="600" font-size="22" fill="white" transform="rotate(-2, 14, 14)">B</text>
+    <text x="11" y="22" font-family="'Outfit', sans-serif" font-weight="600" font-size="20" fill="white" transform="rotate(-2, 14, 14)">B</text>
+    <text x="22" y="18" font-family="'Outfit', sans-serif" font-weight="600" font-size="12" fill="white" transform="rotate(10, 22, 18)">!</text>
   </g>
+  <!-- Wordmark -->
   <text x="36" y="22" font-family="'Outfit', sans-serif" font-weight="600" font-size="18" fill="white" letter-spacing="-0.4">Be Ready Beaumont</text>
+  <!-- Tilted ! in copper -->
+  <text x="207" y="19" font-family="'Outfit', sans-serif" font-weight="700" font-size="20" fill="#d4753e" transform="rotate(12, 207, 19)">!</text>
 </svg>

@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
   <rect x="2" y="2" width="28" height="28" rx="5" fill="#d4753e" transform="rotate(-2, 16, 16)"/>
-  <text x="16" y="24" text-anchor="middle" font-family="'Outfit', sans-serif" font-weight="600" font-size="22" fill="white" transform="rotate(-2, 16, 16)">B</text>
+  <text x="11" y="24" font-family="'Outfit', sans-serif" font-weight="600" font-size="20" fill="white" transform="rotate(-2, 16, 16)">B</text>
+  <text x="23" y="19" font-family="'Outfit', sans-serif" font-weight="600" font-size="12" fill="white" transform="rotate(10, 23, 19)">!</text>
 </svg>
