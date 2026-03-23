@@ -1,11 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 48" fill="none">
-  <!-- B mark — copper rounded square, slightly rotated -->
+  <!-- B monogram — copper rounded square, slightly rotated, oversized B -->
   <g transform="translate(4, 4)">
     <rect x="0" y="0" width="40" height="40" rx="8" fill="#d4753e" transform="rotate(-2, 20, 20)"/>
-    <text x="20" y="29" text-anchor="middle" font-family="'Schibsted Grotesk', sans-serif" font-weight="800" font-size="22" fill="white" transform="rotate(-2, 20, 20)">B</text>
+    <text x="20" y="31" text-anchor="middle" font-family="'Outfit', sans-serif" font-weight="700" font-size="28" fill="white" transform="rotate(-2, 20, 20)">B</text>
   </g>
-  <!-- Wordmark -->
-  <text x="56" y="24" font-family="'Schibsted Grotesk', sans-serif" font-weight="700" font-size="16" fill="white" letter-spacing="-0.3">Be Ready Beaumont</text>
-  <!-- Subtitle -->
-  <text x="56" y="39" font-family="'Outfit', sans-serif" font-weight="500" font-size="9" fill="rgba(255,255,255,0.35)" letter-spacing="2">CTE PATHWAYS</text>
+  <!-- Wordmark in Outfit -->
+  <text x="56" y="30" font-family="'Outfit', sans-serif" font-weight="600" font-size="18" fill="white">Be Ready Beaumont</text>
 </svg>
