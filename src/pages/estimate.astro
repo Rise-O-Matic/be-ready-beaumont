@@ -1,0 +1,222 @@
+---
+import Proposal from '../layouts/Proposal.astro';
+import { base } from '../utils/base';
+---
+
+<Proposal title="The Estimate" current="estimate">
+  <!-- Hero -->
+  <section class="relative bg-brand-dark text-white py-20 md:py-28 overflow-hidden grain">
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-brand-copper/5 rounded-full blur-[120px]"></div>
+    <div class="relative max-w-[900px] mx-auto px-5 sm:px-8">
+      <p class="reveal text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-copper mb-4">Step 4 of 4</p>
+      <h1 class="reveal font-[Schibsted_Grotesk] text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.05]" style="animation-delay: 100ms">
+        What it<br />
+        <span class="text-brand-copper">costs.</span>
+      </h1>
+      <p class="reveal text-lg md:text-xl text-white/50 mt-6 max-w-xl leading-relaxed" style="animation-delay: 200ms">
+        A la carte pricing. Pick a sprint, pick individual deliverables, or go all-in.
+        Community partner rates — not agency rates.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="py-16 md:py-24 bg-brand-cream">
+    <div class="max-w-[900px] mx-auto px-5 sm:px-8">
+      <!-- Sprint 1 -->
+      <div class="on-scroll mb-10">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-[11px] font-bold uppercase tracking-[0.15em] text-brand-copper bg-brand-copper/10 px-2.5 py-1 rounded-full">Sprint 1</span>
+          <span class="text-[13px] text-brand-slate/40 font-medium">Weeks 1–4</span>
+          <span class="text-[11px] text-brand-copper/60 uppercase tracking-wider">— Recommended start</span>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200/60 overflow-hidden">
+          <div class="divide-y divide-gray-100">
+            <div class="flex items-center justify-between p-5">
+              <div>
+                <p class="font-[Schibsted_Grotesk] font-bold text-brand-navy">Website (design + build + content)</p>
+                <p class="text-[13px] text-brand-slate/50 mt-0.5">20 pages, 12 pathways, analytics, forms, CMS</p>
+              </div>
+              <span class="font-[Schibsted_Grotesk] font-bold text-brand-navy text-lg">$3,500–5,000</span>
+            </div>
+            <div class="flex items-center justify-between p-5">
+              <div>
+                <p class="font-[Schibsted_Grotesk] font-bold text-brand-navy">Community Partner Pitch Kit</p>
+                <p class="text-[13px] text-brand-slate/50 mt-0.5">Print + digital leave-behind</p>
+              </div>
+              <span class="font-[Schibsted_Grotesk] font-bold text-brand-navy text-lg">$1,500</span>
+            </div>
+          </div>
+          <div class="bg-brand-navy/5 px-5 py-3 flex items-center justify-between">
+            <span class="font-[Schibsted_Grotesk] font-bold text-brand-navy text-sm">Sprint 1 Total</span>
+            <span class="font-[Schibsted_Grotesk] font-extrabold text-brand-copper text-xl">$5,000–6,500</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sprint 2 -->
+      <div class="on-scroll mb-10">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-[11px] font-bold uppercase tracking-[0.15em] text-brand-slate/40 bg-gray-100 px-2.5 py-1 rounded-full">Sprint 2</span>
+          <span class="text-[13px] text-brand-slate/40 font-medium">Weeks 5–8</span>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200/60 overflow-hidden">
+          <div class="divide-y divide-gray-100">
+            <div class="flex items-center justify-between p-5">
+              <div>
+                <p class="font-[Schibsted_Grotesk] font-bold text-brand-navy">Student Recruitment Package</p>
+                <p class="text-[13px] text-brand-slate/50 mt-0.5">Hallway posters, digital signage, social graphics</p>
+              </div>
+              <span class="font-[Schibsted_Grotesk] font-bold text-brand-navy text-lg">$1,700</span>
+            </div>
+            <div class="flex items-center justify-between p-5">
+              <div>
+                <p class="font-[Schibsted_Grotesk] font-bold text-brand-navy">Pathway One-Sheets (6 pathways)</p>
+                <p class="text-[13px] text-brand-slate/50 mt-0.5">Individual fact sheets, print + digital</p>
+              </div>
+              <span class="font-[Schibsted_Grotesk] font-bold text-brand-navy text-lg">$1,700</span>
+            </div>
+            <div class="flex items-center justify-between p-5">
+              <div>
+                <p class="font-[Schibsted_Grotesk] font-bold text-brand-navy">Social Content Templates (10-pack)</p>
+                <p class="text-[13px] text-brand-slate/50 mt-0.5">Branded templates staff can use without a designer</p>
+              </div>
+              <span class="font-[Schibsted_Grotesk] font-bold text-brand-navy text-lg">$800</span>
+            </div>
+          </div>
+          <div class="bg-brand-navy/5 px-5 py-3 flex items-center justify-between">
+            <span class="font-[Schibsted_Grotesk] font-bold text-brand-navy text-sm">Sprint 2 Total</span>
+            <span class="font-[Schibsted_Grotesk] font-extrabold text-brand-navy text-xl">$4,200</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sprint 3 -->
+      <div class="on-scroll mb-10">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-[11px] font-bold uppercase tracking-[0.15em] text-brand-slate/40 bg-gray-100 px-2.5 py-1 rounded-full">Sprint 3</span>
+          <span class="text-[13px] text-brand-slate/40 font-medium">Weeks 9–12</span>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200/60 overflow-hidden">
+          <div class="divide-y divide-gray-100">
+            <div class="flex items-center justify-between p-5">
+              <div>
+                <p class="font-[Schibsted_Grotesk] font-bold text-brand-navy">Parent Information Package</p>
+                <p class="text-[13px] text-brand-slate/50 mt-0.5">Digital brochure answering "why CTE?"</p>
+              </div>
+              <span class="font-[Schibsted_Grotesk] font-bold text-brand-navy text-lg">$1,000</span>
+            </div>
+            <div class="flex items-center justify-between p-5">
+              <div>
+                <p class="font-[Schibsted_Grotesk] font-bold text-brand-navy">Visual Identity Refinement</p>
+                <p class="text-[13px] text-brand-slate/50 mt-0.5">Formalize the brand that emerged from Sprints 1-2</p>
+              </div>
+              <span class="font-[Schibsted_Grotesk] font-bold text-brand-navy text-lg">$1,000–1,500</span>
+            </div>
+            <div class="flex items-center justify-between p-5">
+              <div>
+                <p class="font-[Schibsted_Grotesk] font-bold text-brand-navy">Remaining Pathway One-Sheets (6)</p>
+                <p class="text-[13px] text-brand-slate/50 mt-0.5">Complete the set for all 12 pathways</p>
+              </div>
+              <span class="font-[Schibsted_Grotesk] font-bold text-brand-navy text-lg">$1,000</span>
+            </div>
+          </div>
+          <div class="bg-brand-navy/5 px-5 py-3 flex items-center justify-between">
+            <span class="font-[Schibsted_Grotesk] font-bold text-brand-navy text-sm">Sprint 3 Total</span>
+            <span class="font-[Schibsted_Grotesk] font-extrabold text-brand-navy text-xl">$3,000–3,500</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Total -->
+      <div class="on-scroll bg-brand-dark rounded-2xl p-8 text-white text-center grain relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-brand-copper/5 to-transparent"></div>
+        <div class="relative">
+          <p class="text-[13px] uppercase tracking-[0.2em] text-white/30 mb-2">All three sprints</p>
+          <div class="font-[Schibsted_Grotesk] text-5xl md:text-6xl font-extrabold text-brand-copper">
+            $10,500–14,200
+          </div>
+          <p class="text-white/40 mt-2 text-sm">12 weeks from signing to full toolkit</p>
+          <div class="w-16 h-px bg-brand-copper/30 mx-auto my-6"></div>
+          <p class="text-white/50 text-sm max-w-md mx-auto leading-relaxed">
+            MVP — website + pitch kit — is live in 4 weeks for $5,000–6,500.
+            Each sprint is invoiced independently. 50% deposit, balance on delivery.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Terms -->
+  <section class="py-16 md:py-24 bg-brand-cream">
+    <div class="max-w-[900px] mx-auto px-5 sm:px-8">
+      <div class="on-scroll grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl p-6 border border-gray-200/60">
+          <h3 class="font-[Schibsted_Grotesk] font-bold text-brand-navy mb-4">What's included</h3>
+          <ul class="space-y-2">
+            {[
+              "2 rounds of revisions per deliverable",
+              "All final files in print-ready and digital formats",
+              "Free hosting (Netlify/Vercel) — $0/month",
+              "Domain registration ($12/year)",
+              "Analytics setup (Plausible or GA4)",
+              "QR code integration for print-to-digital tracking",
+              "WCAG 2.1 AA accessibility compliance",
+            ].map((item) => (
+              <li class="flex items-start gap-2 text-sm text-brand-slate/60">
+                <svg class="w-4 h-4 text-brand-copper mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-gray-200/60">
+          <h3 class="font-[Schibsted_Grotesk] font-bold text-brand-navy mb-4">Pricing notes</h3>
+          <ul class="space-y-3 text-sm text-brand-slate/60">
+            <li>All prices are flat-fee based on defined scope</li>
+            <li>Work outside scope billed at <span class="text-brand-navy font-medium">$110/hr</span> (community partner rate)</li>
+            <li>Standard commercial rate is $170/hr — community pricing reflects our relationship and advisory board role</li>
+            <li>Each sprint is invoiced independently</li>
+            <li>50% deposit secures your timeline slot</li>
+            <li>Balance due Net-15 from delivery</li>
+            <li>This proposal is valid for 30 days</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 md:py-28 bg-brand-dark text-white grain relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-copper/5 to-transparent"></div>
+    <div class="relative max-w-[900px] mx-auto px-5 sm:px-8 text-center">
+      <div class="on-scroll">
+        <h2 class="font-[Schibsted_Grotesk] text-3xl md:text-5xl font-extrabold tracking-tight">
+          Ready to <span class="text-brand-copper">go?</span>
+        </h2>
+        <p class="text-white/50 mt-4 text-lg max-w-md mx-auto leading-relaxed">
+          Pick a sprint. Sign the SOW. We start building the week your deposit clears.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="mailto:steven@beadloom.com?subject=Be%20Ready%20Beaumont%20-%20Let's%20Go"
+            class="group inline-flex items-center gap-3 px-8 py-4 text-sm font-semibold uppercase tracking-wider bg-brand-copper text-white rounded-lg hover:bg-brand-copper/90 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-xl hover:shadow-brand-copper/25"
+          >
+            Let's talk
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <a
+            href={base("audit")}
+            class="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold uppercase tracking-wider border border-white/20 text-white/60 rounded-lg hover:border-white/40 hover:text-white transition-all duration-300"
+          >
+            Start over from the top
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Proposal>

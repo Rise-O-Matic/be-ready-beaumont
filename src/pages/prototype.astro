@@ -1,0 +1,118 @@
+---
+import Proposal from '../layouts/Proposal.astro';
+import { base } from '../utils/base';
+---
+
+<Proposal title="The Prototype" current="prototype">
+  <!-- Hero -->
+  <section class="relative bg-brand-dark text-white py-20 md:py-28 overflow-hidden grain">
+    <div class="absolute top-0 right-1/4 w-96 h-96 bg-brand-copper/5 rounded-full blur-[120px]"></div>
+    <div class="relative max-w-[900px] mx-auto px-5 sm:px-8">
+      <p class="reveal text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-copper mb-4">Step 3 of 4</p>
+      <h1 class="reveal font-[Schibsted_Grotesk] text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.05]" style="animation-delay: 100ms">
+        We already<br />
+        <span class="text-brand-copper">built it.</span>
+      </h1>
+      <p class="reveal text-lg md:text-xl text-white/50 mt-6 max-w-xl leading-relaxed" style="animation-delay: 200ms">
+        This isn't a mockup. It's a working website populated with your actual content —
+        extracted from your decks, organized, and deployed. Every page below is live.
+      </p>
+    </div>
+  </section>
+
+  <!-- Browser frame showing the site -->
+  <section class="py-16 md:py-24 bg-brand-cream">
+    <div class="max-w-[1200px] mx-auto px-5 sm:px-8">
+      <div class="on-scroll">
+        <p class="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-copper mb-3">Live prototype</p>
+        <h2 class="font-[Schibsted_Grotesk] text-2xl md:text-3xl font-extrabold text-brand-navy tracking-tight mb-8">
+          Click through. It's real.
+        </h2>
+      </div>
+
+      <!-- Simulated browser frame -->
+      <div class="on-scroll bg-brand-dark rounded-2xl overflow-hidden shadow-2xl border border-white/5">
+        <!-- Browser chrome -->
+        <div class="flex items-center gap-2 px-4 py-3 bg-brand-navy/80 border-b border-white/5">
+          <div class="flex gap-1.5">
+            <div class="w-3 h-3 rounded-full bg-white/10"></div>
+            <div class="w-3 h-3 rounded-full bg-white/10"></div>
+            <div class="w-3 h-3 rounded-full bg-white/10"></div>
+          </div>
+          <div class="flex-1 mx-4">
+            <div class="bg-white/5 rounded-md px-3 py-1 text-[12px] text-white/30 text-center">
+              bereadybeaumont.org
+            </div>
+          </div>
+        </div>
+        <!-- Site iframe -->
+        <div class="relative" style="padding-bottom: 62.5%;">
+          <iframe
+            src={base("")}
+            class="absolute inset-0 w-full h-full border-0"
+            title="Be Ready Beaumont prototype"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+
+      <p class="text-center text-sm text-brand-slate/40 mt-4">
+        Scroll and click inside the frame — or <a href={base("")} target="_blank" class="text-brand-copper hover:underline">open in a new tab</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- What's in the prototype -->
+  <section class="py-16 md:py-24 bg-brand-dark text-white grain relative overflow-hidden">
+    <div class="max-w-[900px] mx-auto px-5 sm:px-8">
+      <div class="on-scroll">
+        <p class="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-copper mb-3">What's included</p>
+        <h2 class="font-[Schibsted_Grotesk] text-2xl md:text-3xl font-extrabold text-white tracking-tight">
+          20 pages. Real content. Zero placeholder text.
+        </h2>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {[
+          { page: "Homepage", desc: "Hero, stats, audience paths, pathway grid, partner preview, quote" },
+          { page: "12 Pathway Pages", desc: "Individual pages with instructor bios, curriculum, photos, and CTAs" },
+          { page: "For Students", desc: "How to get started, stats, Pathful link, pathway quick-links" },
+          { page: "For Parents", desc: "FAQ, value proposition, certifications, college credit info" },
+          { page: "For Partners", desc: "Business case, inquiry form, current partner list" },
+          { page: "Results", desc: "Growth chart, key metrics, grant history, success stories" },
+          { page: "About", desc: "Program history, philosophy, leadership directory" },
+          { page: "Contact", desc: "Contact form, direct staff info" },
+        ].map((item) => (
+          <div class="on-scroll bg-brand-steel/50 rounded-xl p-5 border border-white/5">
+            <p class="font-[Schibsted_Grotesk] font-bold text-white text-sm">{item.page}</p>
+            <p class="text-[13px] text-white/35 mt-1">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="on-scroll mt-10 bg-brand-copper/10 border border-brand-copper/20 rounded-xl p-6">
+        <p class="text-sm text-white/70 leading-relaxed">
+          <span class="font-bold text-brand-copper">Content source:</span> All text and images were extracted
+          from the Golden Bell Application, NSO 25 deck, and CTE Showcase 2026 deck. No content was
+          invented — this is your program, presented properly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-20 bg-brand-cream">
+    <div class="max-w-[900px] mx-auto px-5 sm:px-8 text-center on-scroll">
+      <p class="text-brand-slate/40 text-sm mb-3">Ready to talk numbers?</p>
+      <a
+        href={base("estimate")}
+        class="group inline-flex items-center gap-3 px-8 py-4 text-sm font-semibold uppercase tracking-wider bg-brand-copper text-white rounded-lg hover:bg-brand-copper/90 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-xl hover:shadow-brand-copper/25"
+      >
+        See the Estimate
+        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </section>
+</Proposal>

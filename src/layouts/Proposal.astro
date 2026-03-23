@@ -1,0 +1,60 @@
+---
+import ProposalNav from '../components/ProposalNav.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  current: 'audit' | 'plan' | 'prototype' | 'estimate';
+}
+
+const { title, current } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <title>{title} | Be Ready Beaumont — Proposal</title>
+  </head>
+  <body class="bg-brand-cream text-brand-slate font-[Outfit]">
+    <ProposalNav current={current} />
+
+    <!-- Spacer for fixed nav -->
+    <div class="h-12"></div>
+
+    <main>
+      <slot />
+    </main>
+
+    <!-- Minimal footer -->
+    <footer class="bg-brand-dark text-white/20 py-6 text-center text-[12px]">
+      <p>Prepared by Steven Brown / Beadloom for Michael Breyer / Beaumont USD</p>
+    </footer>
+
+    <script>
+      function initObserver() {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.05, rootMargin: '0px 0px -20px 0px' }
+        );
+        document.querySelectorAll('.on-scroll').forEach((el) => observer.observe(el));
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initObserver);
+      } else {
+        initObserver();
+      }
+    </script>
+  </body>
+</html>

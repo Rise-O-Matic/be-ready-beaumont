@@ -1,0 +1,126 @@
+---
+import Proposal from '../layouts/Proposal.astro';
+import { base } from '../utils/base';
+---
+
+<Proposal title="The Challenge" current="audit">
+  <!-- Hero -->
+  <section class="relative bg-brand-dark text-white py-20 md:py-28 overflow-hidden grain">
+    <div class="absolute top-1/2 right-0 w-96 h-96 bg-brand-copper/5 rounded-full blur-[120px] -translate-y-1/2"></div>
+    <div class="relative max-w-[900px] mx-auto px-5 sm:px-8">
+      <p class="reveal text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-copper mb-4">Step 1 of 4</p>
+      <h1 class="reveal font-[Schibsted_Grotesk] text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.05]" style="animation-delay: 100ms">
+        You built something<br />
+        <span class="text-brand-copper">remarkable.</span>
+      </h1>
+      <p class="reveal text-lg md:text-xl text-white/50 mt-6 max-w-xl leading-relaxed" style="animation-delay: 200ms">
+        12 pathways. $11.6M in grants. A Golden Bell Award. Michelin-starred chefs teaching
+        high schoolers. But almost nobody outside your building knows about it.
+      </p>
+    </div>
+  </section>
+
+  <!-- The Problem -->
+  <section class="py-16 md:py-24 bg-brand-cream">
+    <div class="max-w-[900px] mx-auto px-5 sm:px-8">
+      <div class="on-scroll">
+        <p class="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-copper mb-3">What we heard</p>
+        <h2 class="font-[Schibsted_Grotesk] text-2xl md:text-4xl font-extrabold text-brand-navy tracking-tight">
+          The marketing infrastructure doesn't exist.
+        </h2>
+      </div>
+
+      <div class="mt-12 space-y-5">
+        {[
+          {
+            problem: "No updated materials despite massive program growth",
+            detail: "The programs have evolved dramatically, but the marketing hasn't. What exists is locked in presentation decks that can't be shared, linked to, or found.",
+          },
+          {
+            problem: "Community partners are approached empty-handed",
+            detail: "When you pitch a business to open its doors to students, there's nothing polished to leave behind. No website, no pitch kit, no one-pager. The ask is compelling — the collateral doesn't exist.",
+          },
+          {
+            problem: "High partner turnover with no institutional memory",
+            detail: "When a champion at a partner organization moves on, the relationship has to be rebuilt from scratch. There's no self-service entry point for their replacement.",
+          },
+          {
+            problem: "Students are placed into electives — CTE needs volunteers",
+            detail: "Students don't choose CTE pathways because they don't know they exist. There's no interruption mechanism in the school environment — no posters, no digital signage, no social presence.",
+          },
+          {
+            problem: "No centralized content — everything is presentation-based",
+            detail: "The Golden Bell application, the showcase decks, the staff bios — it's all excellent content trapped in formats that can't scale. No website to drive traffic to. No measurement to optimize against.",
+          },
+          {
+            problem: "The academic voice is demarketing the program",
+            detail: "Be Ready Beaumont isn't a school department — it's a career launchpad with instructors from Michelin-starred kitchens, Hollywood sets, and FBI academies. But it sounds like a school department.",
+          },
+          {
+            problem: "Partnership pipeline is concentrated in medical",
+            detail: "30+ community partners is strong, but they skew heavily toward healthcare. The program has 7 industry sectors — the partnership base should reflect that diversity.",
+          },
+        ].map((item, i) => (
+          <div class="on-scroll bg-white rounded-2xl p-6 md:p-8 border border-gray-200/60">
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 bg-brand-copper/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                <span class="text-brand-copper font-[Schibsted_Grotesk] font-bold text-sm">{i + 1}</span>
+              </div>
+              <div>
+                <h3 class="font-[Schibsted_Grotesk] font-bold text-brand-navy text-lg">{item.problem}</h3>
+                <p class="text-sm text-brand-slate/60 mt-2 leading-relaxed">{item.detail}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- The Opportunity -->
+  <section class="py-16 md:py-24 bg-brand-dark text-white grain relative overflow-hidden">
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-copper/5 rounded-full blur-[120px]"></div>
+    <div class="relative max-w-[900px] mx-auto px-5 sm:px-8">
+      <div class="on-scroll">
+        <p class="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand-copper mb-3">The good news</p>
+        <h2 class="font-[Schibsted_Grotesk] text-2xl md:text-4xl font-extrabold text-white tracking-tight">
+          The content is already there.
+        </h2>
+        <p class="text-lg text-white/50 mt-4 leading-relaxed max-w-2xl">
+          We extracted 76 images and full text content from your existing decks and the Golden
+          Bell application. The raw material is excellent — it just needs a home.
+        </p>
+      </div>
+
+      <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+        {[
+          { value: "76", label: "Images extracted" },
+          { value: "3", label: "Source documents" },
+          { value: "15", label: "Staff headshots" },
+          { value: "12", label: "Pathways documented" },
+        ].map((stat) => (
+          <div class="on-scroll bg-brand-steel/50 rounded-xl p-5 border border-white/5 text-center">
+            <div class="text-2xl font-[Schibsted_Grotesk] font-extrabold text-brand-copper">{stat.value}</div>
+            <div class="text-[12px] text-white/35 mt-1 uppercase tracking-wider">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Next step CTA -->
+  <section class="py-16 md:py-20 bg-brand-cream">
+    <div class="max-w-[900px] mx-auto px-5 sm:px-8 text-center on-scroll">
+      <p class="text-brand-slate/40 text-sm mb-3">You've seen the challenges. Here's what we do about it.</p>
+      <a
+        href={base("plan")}
+        class="group inline-flex items-center gap-3 px-8 py-4 text-sm font-semibold uppercase tracking-wider bg-brand-copper text-white rounded-lg hover:bg-brand-copper/90 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-xl hover:shadow-brand-copper/25"
+      >
+        See the Plan
+        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </section>
+</Proposal>
