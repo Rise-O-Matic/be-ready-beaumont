@@ -214,16 +214,44 @@ import { base } from '../utils/base';
         <p class="text-white/50 mt-4 text-lg max-w-md mx-auto leading-relaxed">
           Pick a sprint. Sign the SOW. We start building the week your deposit clears.
         </p>
-        <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="mailto:steven@stevenbrown.design?subject=Be%20Ready%20Beaumont%20-%20Let's%20Go"
-            class="group inline-flex items-center gap-3 px-8 py-4 text-sm font-semibold uppercase tracking-wider bg-brand-copper text-white rounded-lg hover:bg-brand-copper/90 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-xl hover:shadow-brand-copper/25"
-          >
-            Let's talk
-            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
+
+        <!-- Contact options -->
+        <div class="mt-12 max-w-2xl mx-auto">
+          <div class="flex flex-col sm:flex-row gap-4 justify-center text-center">
+            <a
+              href="https://calendar.app.google/GAkE65jNPyKzyDRaA"
+              target="_blank"
+              rel="noopener"
+              class="group flex flex-col items-center gap-2 p-5 rounded-lg border border-white/10 hover:border-brand-copper/40 hover:bg-brand-copper/5 transition-all duration-300"
+            >
+              <svg class="w-6 h-6 text-brand-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span class="text-sm font-semibold text-white/80 group-hover:text-white transition-colors">Schedule a call</span>
+            </a>
+            <button
+              type="button"
+              id="copy-email"
+              class="group flex flex-col items-center gap-2 p-5 rounded-lg border border-white/10 hover:border-brand-copper/40 hover:bg-brand-copper/5 transition-all duration-300 cursor-pointer"
+            >
+              <svg class="w-6 h-6 text-brand-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span id="copy-email-label" class="text-sm font-semibold text-white/80 group-hover:text-white transition-colors">steven@stevenbrown.design</span>
+            </button>
+            <a
+              href="tel:+13109943048"
+              class="group flex flex-col items-center gap-2 p-5 rounded-lg border border-white/10 hover:border-brand-copper/40 hover:bg-brand-copper/5 transition-all duration-300"
+            >
+              <svg class="w-6 h-6 text-brand-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <span class="text-sm font-semibold text-white/80 group-hover:text-white transition-colors">(310) 994-3048</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-8">
           <a
             href={base("audit")}
             class="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold uppercase tracking-wider border border-white/20 text-white/60 rounded-lg hover:border-white/40 hover:text-white transition-all duration-300"
@@ -234,4 +262,19 @@ import { base } from '../utils/base';
       </div>
     </div>
   </section>
+
+  <script>
+    document.getElementById('copy-email')?.addEventListener('click', async () => {
+      const label = document.getElementById('copy-email-label');
+      if (!label) return;
+      try {
+        await navigator.clipboard.writeText('steven@stevenbrown.design');
+        const original = label.textContent;
+        label.textContent = 'Copied!';
+        setTimeout(() => { label.textContent = original; }, 2000);
+      } catch {
+        label.textContent = 'steven@stevenbrown.design';
+      }
+    });
+  </script>
 </Proposal>
